@@ -5,7 +5,7 @@ public class PlayerAttack : MonoBehaviour
     Animator anim;
 
     private void Awake() {
-        anim = GetComponentInParent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnAttack() {

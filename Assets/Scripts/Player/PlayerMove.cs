@@ -21,15 +21,19 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && 
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack2") && 
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3")) {
             body.linearVelocityX = inputValue * speed;
         }
     }
 
     private void LateUpdate() {
-        //anim.SetFloat("Speed", Mathf.Abs(inputValue));
+        anim.SetFloat("Speed", Mathf.Abs(inputValue));
 
-        if (inputValue != 0f && anim.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+        if (inputValue != 0f && (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") &&
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack2") &&
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3"))) {
             if (inputValue < 0f) {
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
