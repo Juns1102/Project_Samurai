@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: idle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -43,8 +43,23 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 7937068613583049803, guid: e2f725b23cec40c419b6c108642599c4, type: 3}
+    - {fileID: -2352823206137018540, guid: e2f725b23cec40c419b6c108642599c4, type: 3}
+    - {fileID: -3593778510370328456, guid: e2f725b23cec40c419b6c108642599c4, type: 3}
+    - {fileID: -2759537185822645899, guid: e2f725b23cec40c419b6c108642599c4, type: 3}
+    - {fileID: -1793940536190943539, guid: e2f725b23cec40c419b6c108642599c4, type: 3}
+    - {fileID: -1793940536190943539, guid: e2f725b23cec40c419b6c108642599c4, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
