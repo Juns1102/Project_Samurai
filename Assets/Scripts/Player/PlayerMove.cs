@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float jumpPower;
     [SerializeField]
-    bool change;
+    bool isJump;
 
     public float inputValue;
 
@@ -57,10 +57,22 @@ public class PlayerMove : MonoBehaviour
 
     private void OnMove(InputValue value) {
         inputValue = value.Get<Vector2>().x;
-        
     }
 
     private void OnJump() {
-        body.AddForceY(jumpPower, ForceMode2D.Impulse);
+        if (!isJump) {
+            body.AddForceY(jumpPower, ForceMode2D.Impulse);
+            isJump = true;
+        }
+    }
+
+    public bool IsJumping() {
+        return isJump;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.contacts[0].normal.y > 0.7f) {
+            isJump = false;
+        }
     }
 }

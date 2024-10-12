@@ -115,4 +115,12 @@ public class PlayerAnimation : MonoBehaviour
             rb.AddForceX(-force, ForceMode2D.Force);
         }
     }
+
+    private void SetAttack() {
+        gameObject.GetComponentInChildren<BoxCollider2D>().enabled = true;
+    }
+
+    private void EndAttack() {
+        gameObject.GetComponentInChildren<BoxCollider2D>().enabled = false;
+    }
 }
