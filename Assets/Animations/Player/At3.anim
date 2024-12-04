@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run
+  m_Name: At3
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -23,7 +23,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -40,21 +40,7 @@ AnimationClip:
     flags: 16
   m_PPtrCurves:
   - serializedVersion: 2
-    curve:
-    - time: 0
-      value: {fileID: -8783645974212973464, guid: 58072b7b590d60c4a90261ccf55cb36f, type: 3}
-    - time: 0.08999999
-      value: {fileID: -434317235304294491, guid: 58072b7b590d60c4a90261ccf55cb36f, type: 3}
-    - time: 0.17999999
-      value: {fileID: -7235854530947057878, guid: 58072b7b590d60c4a90261ccf55cb36f, type: 3}
-    - time: 0.26999998
-      value: {fileID: -8883701498976685717, guid: 58072b7b590d60c4a90261ccf55cb36f, type: 3}
-    - time: 0.36
-      value: {fileID: 8377950813567708086, guid: 58072b7b590d60c4a90261ccf55cb36f, type: 3}
-    - time: 0.45
-      value: {fileID: -7356793865430255923, guid: 58072b7b590d60c4a90261ccf55cb36f, type: 3}
-    - time: 0.53
-      value: {fileID: -7356793865430255923, guid: 58072b7b590d60c4a90261ccf55cb36f, type: 3}
+    curve: []
     attribute: m_Sprite
     path: 
     classID: 212
@@ -73,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.53999996
+    m_StopTime: 0
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -95,7 +81,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
