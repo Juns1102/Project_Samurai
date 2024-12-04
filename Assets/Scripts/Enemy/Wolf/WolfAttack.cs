@@ -13,6 +13,7 @@ public class WolfAttack : EnemyAttack
     [SerializeField]
     float distance;
 
+    BoxCollider2D bc2d;
     GameObject wolf;
     Animator anim;
     EnemyChase enemyChase;
@@ -22,6 +23,7 @@ public class WolfAttack : EnemyAttack
         anim = GetComponentInParent<Animator>();
         enemyChase = wolf.GetComponentInChildren<EnemyChase>();
         timeAfterCoolTime = coolTime;
+        bc2d = GetComponent<BoxCollider2D>();
     }
 
     private void Update(){

@@ -88,7 +88,7 @@
                 },
                 {
                     "name": "Paring",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "db165a31-57a4-4ef1-81bf-c1120b144a85",
                     "expectedControlType": "",
                     "processors": "",

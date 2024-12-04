@@ -16,14 +16,17 @@ public class PlayerMove : MonoBehaviour
 
     public float inputValue;
 
-    Rigidbody2D body;
-    Animator anim;
-    SpriteRenderer spriter;
+    private Rigidbody2D body;
+    private Animator anim;
+    private SpriteRenderer spriter;
+    private PlayerParing pParing;
+
 
     private void Awake() {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
+        pParing = GetComponent<PlayerParing>();
     }
 
     private void FixedUpdate() {
@@ -32,11 +35,15 @@ public class PlayerMove : MonoBehaviour
         }
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && 
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack2") && 
-            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3")) {
-            body.linearVelocityX = inputValue * speed;
-            if (speed < maxSpeed) {
-                speed += 0.5f;
-            }
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3") &&
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Guard") &&
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Paring_Fail") &&
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Paring_Success")) {
+                pParing.CancleParing();
+                body.linearVelocityX = inputValue * speed;
+                if (speed < maxSpeed) {
+                    speed += 0.5f;
+                }
         }
     }
 

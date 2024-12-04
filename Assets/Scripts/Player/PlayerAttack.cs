@@ -6,13 +6,11 @@ public class PlayerAttack : MonoBehaviour
 {
     private Animator anim;
     private PlayerAnimation pAnim;
-    private Rigidbody2D rb;
     private PlayerMove pm;
 
     private void Awake() {
         anim = GetComponent<Animator>();
         pAnim = GetComponent<PlayerAnimation>();
-        rb = GetComponent<Rigidbody2D>();
         pm = GetComponent<PlayerMove>();
     }
 

@@ -3,12 +3,10 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
-    private int num;
-    public void Game() {
-        Debug.Log("siuuuu");
-    }
+    private float hearts;
 
-    public void numUp() {
-        num++;
+    public void Damaged(float damage){
+        hearts -= damage;
+        Debug.Log(hearts);
     }
 }

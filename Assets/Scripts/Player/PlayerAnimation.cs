@@ -123,4 +123,12 @@ public class PlayerAnimation : MonoBehaviour
     private void EndAttack() {
         gameObject.GetComponentInChildren<BoxCollider2D>().enabled = false;
     }
+
+    public void ResetAttack(){
+        attack1 = false;
+        attack2 = false;
+        attack3 = false;
+        ready2 = false;
+        ready3 = false;
+    }
 }
