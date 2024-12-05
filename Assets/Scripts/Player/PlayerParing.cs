@@ -1,10 +1,15 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class PlayerParing : MonoBehaviour
 {
     [SerializeField]
-    private bool paring;
+    private bool activeParing;
+    [SerializeField]
+    private float coolTime;
+    [SerializeField]
+    private float maxCoolTime;
     [SerializeField]
     private float paring_BackWards;
     [SerializeField]
@@ -30,9 +35,10 @@ public class PlayerParing : MonoBehaviour
     }
 
     private void OnParing(){
-        if(!damaged){
+        if(!damaged && activeParing){
             body.linearVelocity = Vector2.zero;
             anim.SetTrigger("Guard");
+            StartCoroutine(paringCoolTime());
         }
     }
 
@@ -62,6 +68,7 @@ public class PlayerParing : MonoBehaviour
     }
 
     private void Damaged(float damage){
+        damaged = true;
         GameManager.Instance.Damaged(damage);
         if(damage != 0){
             sr.color = new Color(255f/255f, 130f/255f, 130f/255f);
@@ -74,39 +81,76 @@ public class PlayerParing : MonoBehaviour
         onParing = false;
     }
 
+    IEnumerator paringCoolTime(){
+        activeParing = false;
+        while(coolTime > 0.0f){
+            coolTime -= Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+        activeParing = true;
+        coolTime = maxCoolTime;
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("EnemyAttack")){
             if(anim.GetCurrentAnimatorStateInfo(0).IsName("Guard")){
                 if(timing){
-                    anim.SetTrigger("Paring_S");
                     if(transform.position.x < other.transform.position.x){
-                        BackWards_S(-1f);
+                        if(transform.rotation.y == -1){
+                            Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
+                        }
+                        else{
+                            anim.SetTrigger("Paring_S");
+                            BackWards_S(-1f);
+                        }
                     }
                     else{
-                        BackWards_S(1f);
+                        if(transform.rotation.y == 0){
+                            Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
+                        }
+                        else{
+                            anim.SetTrigger("Paring_S");
+                            BackWards_S(1f);
+                        }
                     }
                     other.GetComponentInParent<EnemyStat>().AfterAttack();
                 }
                 else{
-                    anim.SetTrigger("Paring_F");
                     if(transform.position.x < other.transform.position.x){
-                        BackWards_F(-1f);
+                        if(transform.rotation.y == -1){
+                            Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
+                        }
+                        else{
+                            anim.SetTrigger("Paring_F");
+                            BackWards_F(-1f);
+                            guard = true;
+                            if(!damaged){
+                                GameManager.Instance.Damaged(other.GetComponentInParent<EnemyStat>().GetDamage()*0.5f);
+                                guard = false; 
+                                damaged = false;
+                            }
+                        }
                     }
                     else{
-                        BackWards_F(1f);
-                    }
-                    guard = true;
-                    if(!damaged){
-                        GameManager.Instance.Damaged(other.GetComponentInParent<EnemyStat>().GetDamage()*0.5f);
-                        guard = false; 
-                        damaged = false;
+                        if(transform.rotation.y == 0){
+                            Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
+                        }
+                        else{
+                            anim.SetTrigger("Paring_F");
+                            BackWards_F(1f);
+                            guard = true;
+                            if(!damaged){
+                                GameManager.Instance.Damaged(other.GetComponentInParent<EnemyStat>().GetDamage()*0.5f);
+                                guard = false; 
+                                damaged = false;
+                            }
+                        }
                     }
                     other.GetComponentInParent<EnemyStat>().AfterAttack();
                 }
             }
             else{
                 if(!onParing){
-                    damaged = true;
                     if(!guard){
                         Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
                         other.GetComponentInParent<EnemyStat>().AfterAttack();

@@ -134,7 +134,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.1
+  - time: 0.12
     functionName: ParingFail
     data: 
     objectReferenceParameter: {fileID: 0}
