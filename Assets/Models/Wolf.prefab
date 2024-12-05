@@ -464,6 +464,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 12.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4654510642637710697, guid: 55d35d9812890634386f77ef0a874687, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6315716970745414300, guid: 55d35d9812890634386f77ef0a874687, type: 3}
       propertyPath: m_Name
       value: HpBarCanvas
