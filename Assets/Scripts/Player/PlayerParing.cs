@@ -30,7 +30,10 @@ public class PlayerParing : MonoBehaviour
     }
 
     private void OnParing(){
-        anim.SetTrigger("Guard");
+        if(!damaged){
+            body.linearVelocity = Vector2.zero;
+            anim.SetTrigger("Guard");
+        }
     }
 
     private void SetParing(){
@@ -60,9 +63,11 @@ public class PlayerParing : MonoBehaviour
 
     private void Damaged(float damage){
         GameManager.Instance.Damaged(damage);
-        sr.color = new Color(255f/255f, 130f/255f, 130f/255f);
-        transform.DOShakePosition(0.1f, new Vector2(0.3f, 0), 10, 90, false, true, ShakeRandomnessMode.Full).OnComplete(() => 
-        {sr.color = new Color(1, 1, 1); guard = false; damaged = false;}).SetLink(gameObject);
+        if(damage != 0){
+            sr.color = new Color(255f/255f, 130f/255f, 130f/255f);
+            transform.DOShakePosition(0.1f, new Vector2(0.3f, 0), 10, 90, false, true, ShakeRandomnessMode.Full).OnComplete(() => 
+            {sr.color = new Color(1, 1, 1); guard = false; damaged = false;}).SetLink(gameObject);
+        }
     }
 
     public void CancleParing(){
@@ -80,6 +85,7 @@ public class PlayerParing : MonoBehaviour
                     else{
                         BackWards_S(1f);
                     }
+                    other.GetComponentInParent<EnemyStat>().AfterAttack();
                 }
                 else{
                     anim.SetTrigger("Paring_F");
@@ -95,6 +101,7 @@ public class PlayerParing : MonoBehaviour
                         guard = false; 
                         damaged = false;
                     }
+                    other.GetComponentInParent<EnemyStat>().AfterAttack();
                 }
             }
             else{
@@ -102,6 +109,7 @@ public class PlayerParing : MonoBehaviour
                     damaged = true;
                     if(!guard){
                         Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
+                        other.GetComponentInParent<EnemyStat>().AfterAttack();
                     }
                 }
             }

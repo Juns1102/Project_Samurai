@@ -336,7 +336,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  hearts: 6
+  activeAttack: 1
+  hearts: 100
 --- !u!1 &109406390
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class WolfAttack : EnemyAttack
     GameObject wolf;
     Animator anim;
     EnemyChase enemyChase;
+    EnemyStat eStat;
     private void Awake()
     {
         wolf = transform.parent.gameObject;
@@ -24,6 +25,7 @@ public class WolfAttack : EnemyAttack
         enemyChase = wolf.GetComponentInChildren<EnemyChase>();
         timeAfterCoolTime = coolTime;
         bc2d = GetComponent<BoxCollider2D>();
+        eStat = GetComponentInParent<EnemyStat>();
     }
 
     private void Update(){
@@ -48,6 +50,7 @@ public class WolfAttack : EnemyAttack
     }
 
     private void Attack(){
+        eStat.SetAttack();
         anim.SetTrigger("Attack");
     }//0.3 0.75 1
 
