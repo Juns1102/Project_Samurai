@@ -10,6 +10,8 @@ public class PlayerParing : MonoBehaviour
     [SerializeField]
     private bool onParing;
     private bool timing;
+    private bool guard;
+    private bool damaged;
     private Animator anim;
     private PlayerAnimation pAnim;
     private BoxCollider2D bc2d1;
@@ -59,7 +61,8 @@ public class PlayerParing : MonoBehaviour
     private void Damaged(float damage){
         GameManager.Instance.Damaged(damage);
         sr.color = new Color(255f/255f, 130f/255f, 130f/255f);
-        transform.DOShakePosition(0.1f, new Vector2(0.3f, 0), 10, 90, false, true, ShakeRandomnessMode.Full).OnComplete(() => sr.color = new Color(1, 1, 1)).SetLink(gameObject);
+        transform.DOShakePosition(0.1f, new Vector2(0.3f, 0), 10, 90, false, true, ShakeRandomnessMode.Full).OnComplete(() => 
+        {sr.color = new Color(1, 1, 1); guard = false; damaged = false;}).SetLink(gameObject);
     }
 
     public void CancleParing(){
@@ -86,12 +89,20 @@ public class PlayerParing : MonoBehaviour
                     else{
                         BackWards_F(1f);
                     }
-                    GameManager.Instance.Damaged(other.GetComponentInParent<EnemyStat>().GetDamage()*0.5f);
+                    guard = true;
+                    if(!damaged){
+                        GameManager.Instance.Damaged(other.GetComponentInParent<EnemyStat>().GetDamage()*0.5f);
+                        guard = false; 
+                        damaged = false;
+                    }
                 }
             }
             else{
                 if(!onParing){
-                    Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
+                    damaged = true;
+                    if(!guard){
+                        Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
+                    }
                 }
             }
         }
