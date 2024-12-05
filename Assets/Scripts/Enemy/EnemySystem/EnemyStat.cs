@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyStat : MonoBehaviour
 {
@@ -8,9 +9,25 @@ public class EnemyStat : MonoBehaviour
     bool activeAttack;
     [SerializeField]
     float hearts;
+    [SerializeField]
+    float maxHearts;
+    Slider slider;
+    [SerializeField]
+    GameObject hpCanvas;
 
     private void Start() {
         activeAttack = true;
+        slider = transform.GetChild(2).GetChild(0).GetComponent<Slider>();
+        hpCanvas = slider.transform.parent.gameObject;
+    }
+
+    private void Update() {
+        if(transform.rotation.y != 0){
+            hpCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else{
+            hpCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
     public float GetDamage(){
@@ -23,6 +40,8 @@ public class EnemyStat : MonoBehaviour
     }
     public void Damaged(float damage){
         hearts -= damage;
+        
+        slider.value = hearts/maxHearts;
     }
 
     public float GetHearts(){
