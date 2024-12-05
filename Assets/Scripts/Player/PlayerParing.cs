@@ -42,6 +42,10 @@ public class PlayerParing : MonoBehaviour
         }
     }
 
+    public bool GetParing(){
+        return onParing;
+    }
+
     private void SetParing(){
         timing = true;
         bc2d1.enabled = false;
@@ -74,6 +78,10 @@ public class PlayerParing : MonoBehaviour
             sr.color = new Color(255f/255f, 130f/255f, 130f/255f);
             transform.DOShakePosition(0.1f, new Vector2(0.3f, 0), 10, 90, false, true, ShakeRandomnessMode.Full).OnComplete(() => 
             {sr.color = new Color(1, 1, 1); guard = false; damaged = false;}).SetLink(gameObject);
+        }
+        else{
+            transform.DOShakePosition(0.1f, new Vector2(0f, 0), 0, 0, false, true, ShakeRandomnessMode.Full).OnComplete(() => 
+            {guard = false; damaged = false;}).SetLink(gameObject);
         }
     }
 

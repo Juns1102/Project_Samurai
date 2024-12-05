@@ -1766,11 +1766,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4702696216338701299, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
       propertyPath: coolTime
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4702696216338701299, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
       propertyPath: maxCoolTime
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4702696216338701299, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
       propertyPath: activeParing

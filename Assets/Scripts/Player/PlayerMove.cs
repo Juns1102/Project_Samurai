@@ -52,7 +52,7 @@ public class PlayerMove : MonoBehaviour
 
         if (inputValue != 0f && (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") &&
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack2") &&
-            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3"))) {
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3")) && !pParing.GetParing()) {
             if (inputValue < 0f) {
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
