@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,10 @@ public class PlayerMove : MonoBehaviour
     float jumpPower;
     [SerializeField]
     bool isJump;
+    [SerializeField]
+    Vector2 targetPos;
+    [SerializeField]
+    bool userCtr;
 
     public float inputValue;
 
@@ -20,6 +25,7 @@ public class PlayerMove : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriter;
     private PlayerParing pParing;
+    private UIController uiController;
 
 
     private void Awake() {
@@ -27,9 +33,36 @@ public class PlayerMove : MonoBehaviour
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
         pParing = GetComponent<PlayerParing>();
+        uiController = GetComponent<UIController>();
+    }
+
+    private void Start() {
+        SceneChangeMove();
     }
 
     private void FixedUpdate() {
+        if(userCtr && !uiController.GetPause()){
+            Move();
+        }
+    }
+
+    private void LateUpdate() {
+        if(userCtr && !uiController.GetPause()){
+            MoveAnim();
+        }
+    }
+
+    private void SceneChangeMove(){
+        userCtr = false;
+        anim.SetFloat("Speed", 1);
+        transform.DOMove((Vector2)transform.position + targetPos, 1f).SetEase(Ease.Linear).OnComplete(() => userCtr = true).SetLink(gameObject);
+    }
+
+    private void OnMove(InputValue value) {
+        inputValue = value.Get<Vector2>().x;
+    }
+
+    private void Move(){
         if (inputValue == 0f) {
             speed = startSpeed;
         }
@@ -39,15 +72,15 @@ public class PlayerMove : MonoBehaviour
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Guard") &&
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Paring_Fail") &&
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Paring_Success")) {
-                pParing.CancleParing();
-                body.linearVelocityX = inputValue * speed;
-                if (speed < maxSpeed) {
-                    speed += 0.5f;
-                }
+            pParing.CancleParing();
+            body.linearVelocityX = inputValue * speed;
+            if (speed < maxSpeed) {
+                speed += 0.5f;
+            }
         }
     }
 
-    private void LateUpdate() {
+    private void MoveAnim(){
         anim.SetFloat("Speed", Mathf.Abs(inputValue));
 
         if (inputValue != 0f && (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") &&
@@ -60,10 +93,6 @@ public class PlayerMove : MonoBehaviour
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
-    }
-
-    private void OnMove(InputValue value) {
-        inputValue = value.Get<Vector2>().x;
     }
 
     private void OnJump() {
@@ -80,6 +109,12 @@ public class PlayerMove : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.contacts[0].normal.y > 0.7f) {
             isJump = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.layer == LayerMask.NameToLayer("SceneTrigger")){
+            SceneChangeMove();
         }
     }
 }
