@@ -23,6 +23,7 @@ public class PlayerParing : MonoBehaviour
     private BoxCollider2D bc2d2;
     private Rigidbody2D body;
     private SpriteRenderer sr;
+    private PlayerMove pm;
 
     void Start()
     {
@@ -32,9 +33,16 @@ public class PlayerParing : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         pAnim = GetComponent<PlayerAnimation>();
         sr = GetComponent<SpriteRenderer>();
+        pm = GetComponent<PlayerMove>();
     }
 
     private void OnParing(){
+        if(!pm.IsJumping()){
+            Paring();
+        }
+    }
+
+    private void Paring(){
         if(!damaged && activeParing){
             body.linearVelocity = Vector2.zero;
             anim.SetTrigger("Guard");
