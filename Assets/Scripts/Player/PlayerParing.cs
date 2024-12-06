@@ -25,6 +25,8 @@ public class PlayerParing : MonoBehaviour
     private SpriteRenderer sr;
     private PlayerMove pm;
 
+    public ParticleSystem paringParticle1;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -34,6 +36,10 @@ public class PlayerParing : MonoBehaviour
         pAnim = GetComponent<PlayerAnimation>();
         sr = GetComponent<SpriteRenderer>();
         pm = GetComponent<PlayerMove>();
+    }
+
+    private void ParingParticle1(){
+        paringParticle1.Play();
     }
 
     private void OnParing(){

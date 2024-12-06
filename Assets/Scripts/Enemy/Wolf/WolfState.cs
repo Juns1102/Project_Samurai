@@ -35,10 +35,9 @@ public class WolfState : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("PlayerAttack")){
-            eStat.Damaged(1);
-            Damaged();
-            if(eStat.GetHearts() <= 0){
-                Destroy(gameObject);
+            if(!eStat.GetDie()){
+                eStat.Damaged(1);
+                Damaged();
             }
         }
     }

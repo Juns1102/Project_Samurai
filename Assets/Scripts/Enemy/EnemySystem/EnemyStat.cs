@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class EnemyStat : MonoBehaviour
 {
@@ -11,23 +12,21 @@ public class EnemyStat : MonoBehaviour
     float hearts;
     [SerializeField]
     float maxHearts;
+    bool die;
     Slider slider;
     [SerializeField]
     GameObject hpCanvas;
+    Animator anim;
 
     private void Start() {
         activeAttack = true;
         slider = transform.GetChild(2).GetChild(0).GetComponent<Slider>();
         hpCanvas = slider.transform.parent.gameObject;
+        anim = GetComponent<Animator>();
     }
 
     private void Update() {
-        if(transform.rotation.y != 0){
-            hpCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
-        }
-        else{
-            hpCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
-        }
+        hpCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
     }
 
     public float GetDamage(){
@@ -41,7 +40,19 @@ public class EnemyStat : MonoBehaviour
     public void Damaged(float damage){
         hearts -= damage;
         
-        slider.value = hearts/maxHearts;
+        slider.DOValue(hearts/maxHearts, 0.3f, false);
+        if(hearts <= 0){
+            die = true;
+            anim.SetTrigger("Die");
+        }
+    }
+
+    public bool GetDie(){
+        return die;
+    }
+
+    public void Die(){
+        Destroy(gameObject);
     }
 
     public float GetHearts(){

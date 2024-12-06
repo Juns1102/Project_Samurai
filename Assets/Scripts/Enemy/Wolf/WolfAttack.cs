@@ -40,8 +40,10 @@ public class WolfAttack : EnemyAttack
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && 
                 !anim.GetCurrentAnimatorStateInfo(0).IsName("Dead") && 
                 timeAfterCoolTime >= coolTime) {
-                Attack();
-                timeAfterCoolTime = 0f;
+                    if(!eStat.GetDie()){
+                        Attack();
+                        timeAfterCoolTime = 0f;
+                    }
             }
         }
         else {

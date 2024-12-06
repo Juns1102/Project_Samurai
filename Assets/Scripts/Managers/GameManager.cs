@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -15,6 +16,6 @@ public class GameManager : Singleton<GameManager>
 
     public void Damaged(float damage){
         hearts -= damage;
-        slider.value = hearts/maxHearts;
+        slider.DOValue(hearts/maxHearts, 0.3f, false);
     }
 }

@@ -12,6 +12,7 @@ public class EnemyChase : MonoBehaviour
     Animator anim;
     GameObject wolf;
     WolfAttack wolfAttack;
+    EnemyStat eStat;
 
     void Start()
     {
@@ -21,15 +22,28 @@ public class EnemyChase : MonoBehaviour
         body = GetComponentInParent<Rigidbody2D>();
         wolf = transform.parent.gameObject;
         wolfAttack = wolf.GetComponentInChildren<WolfAttack>();
+        eStat = GetComponentInParent<EnemyStat>();
     }
 
     private void FixedUpdate() {
+        if(!eStat.GetDie()){
+            Move();
+        }
+    }
+
+    private void LateUpdate() {
+        if(!eStat.GetDie()){
+            MoveAnim();
+        }
+    }
+
+    private void Move(){
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && !wolfAttack.GetStop()) {
             body.linearVelocityX = dir * speed;
         }
     }
 
-    private void LateUpdate() {
+    private void MoveAnim(){
         if(!wolfAttack.GetStop()){
             anim.SetFloat("Speed", Mathf.Abs(dir));
         }
