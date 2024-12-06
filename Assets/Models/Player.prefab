@@ -356,6 +356,7 @@ MonoBehaviour:
   paring_BackWards: 5
   onParing: 0
   paringParticle1: {fileID: 5596615054784497116}
+  paringParticle2: {fileID: 0}
 --- !u!114 &8602912535921220347
 MonoBehaviour:
   m_ObjectHideFlags: 0
