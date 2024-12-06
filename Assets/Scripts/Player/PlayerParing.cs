@@ -26,6 +26,7 @@ public class PlayerParing : MonoBehaviour
     private PlayerMove pm;
 
     public ParticleSystem paringParticle1;
+    public ParticleSystem paringParticle2;
 
     void Start()
     {
@@ -42,8 +43,12 @@ public class PlayerParing : MonoBehaviour
         paringParticle1.Play();
     }
 
+    private void ParingParticle2(){
+        paringParticle2.Play();
+    }
+
     private void OnParing(){
-        if(!pm.IsJumping()){
+        if(!pm.IsJumping() && pm.GetUserCtr()){
             Paring();
         }
     }

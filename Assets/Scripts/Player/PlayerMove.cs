@@ -52,6 +52,10 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    public bool GetUserCtr(){
+        return userCtr;
+    }
+
     private void SceneChangeMove(){
         userCtr = false;
         anim.SetFloat("Speed", 1);

@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     }
 
     private void OnAttack() {
-        if(!uIController.GetPause()){
+        if(!uIController.GetPause() && pm.GetUserCtr()){
             Attack();
         }
     }
