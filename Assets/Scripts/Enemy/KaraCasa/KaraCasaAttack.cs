@@ -1,8 +1,6 @@
-using DG.Tweening;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class WolfAttack : MonoBehaviour
+public class KaraCasaAttack : MonoBehaviour
 {
     [SerializeField]
     float coolTime;
@@ -14,33 +12,41 @@ public class WolfAttack : MonoBehaviour
     float distance;
 
     BoxCollider2D bc2d;
-    GameObject wolf;
+    GameObject KaraCasa;
     Animator anim;
     EnemyChase enemyChase;
     EnemyStat eStat;
-    private void Awake()
+    KaraCasaState karaCasaState;
+
+    void Awake()
     {
-        wolf = transform.parent.gameObject;
+        KaraCasa = transform.parent.gameObject;
         anim = GetComponentInParent<Animator>();
-        enemyChase = wolf.GetComponentInChildren<EnemyChase>();
+        enemyChase = KaraCasa.GetComponentInChildren<EnemyChase>();
         timeAfterCoolTime = coolTime;
         bc2d = GetComponent<BoxCollider2D>();
         eStat = GetComponentInParent<EnemyStat>();
+        karaCasaState = GetComponent<KaraCasaState>();
     }
 
-    private void Update(){
+    void Update()
+    {
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, distance, Vector2.up, 0, 1 << LayerMask.NameToLayer("Player"));
         Debug.DrawRay(transform.position, transform.right * distance, Color.yellow);
         Debug.DrawRay(transform.position, -transform.right * distance, Color.yellow);
-        timeAfterCoolTime += Time.deltaTime;
-
+        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && 
+                !anim.GetCurrentAnimatorStateInfo(0).IsName("AttackMode")){
+            timeAfterCoolTime += Time.deltaTime;
+        }
+        
         if (hit.collider != null) {
             stop = true;
-            wolf.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            KaraCasa.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && 
+                !anim.GetCurrentAnimatorStateInfo(0).IsName("AttackMode") &&
                 timeAfterCoolTime >= coolTime) {
                     if(!eStat.GetDie()){
-                        Attack();
+                        AttackMode();
                         timeAfterCoolTime = 0f;
                     }
             }
@@ -49,11 +55,12 @@ public class WolfAttack : MonoBehaviour
             stop = false;
         }
     }
+    
+    private void AttackMode(){
+        anim.SetTrigger("AttackMode");
+    }
 
-    private void Attack(){
-        eStat.SetAttack();
-        anim.SetTrigger("Attack");
-    }//0.3 0.75 1
+    
 
     public bool GetStop(){
         return stop;

@@ -136,6 +136,9 @@ public class PlayerParing : MonoBehaviour
                             Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
                         }
                         else{
+                            if(other.transform.parent.CompareTag("KaraCasa")){
+                                other.GetComponentInParent<KaraCasaState>().Parried();
+                            }
                             anim.SetTrigger("Paring_S");
                             BackWards_S(-1f);
                         }
@@ -145,6 +148,9 @@ public class PlayerParing : MonoBehaviour
                             Damaged(other.GetComponentInParent<EnemyStat>().GetDamage());
                         }
                         else{
+                            if(other.transform.parent.CompareTag("KaraCasa")){
+                                other.GetComponentInParent<KaraCasaState>().Parried();
+                            }
                             anim.SetTrigger("Paring_S");
                             BackWards_S(1f);
                         }

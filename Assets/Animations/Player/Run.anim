@@ -53,6 +53,8 @@ AnimationClip:
       value: {fileID: -50158376625833248, guid: 67aaa258814815b419e8f1f3c246e9cb, type: 3}
     - time: 0.67
       value: {fileID: 7556334813827666232, guid: 67aaa258814815b419e8f1f3c246e9cb, type: 3}
+    - time: 0.81
+      value: {fileID: 7556334813827666232, guid: 67aaa258814815b419e8f1f3c246e9cb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -90,12 +92,13 @@ AnimationClip:
     - {fileID: 8877958100590729468, guid: 67aaa258814815b419e8f1f3c246e9cb, type: 3}
     - {fileID: -50158376625833248, guid: 67aaa258814815b419e8f1f3c246e9cb, type: 3}
     - {fileID: 7556334813827666232, guid: 67aaa258814815b419e8f1f3c246e9cb, type: 3}
+    - {fileID: 7556334813827666232, guid: 67aaa258814815b419e8f1f3c246e9cb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.68
+    m_StopTime: 0.82
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -143,7 +146,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.67
+  - time: 0.81
     functionName: Move_Sound2
     data: 
     objectReferenceParameter: {fileID: 0}
