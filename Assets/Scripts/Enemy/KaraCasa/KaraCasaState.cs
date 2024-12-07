@@ -27,6 +27,7 @@ public class KaraCasaState : MonoBehaviour
     int shield;
     [SerializeField]
     int maxShield;
+    bool shieldFunc;
 
 
     void Start()
@@ -38,6 +39,7 @@ public class KaraCasaState : MonoBehaviour
         targetPos = GameObject.Find("Player").transform;
         anim = GetComponent<Animator>();
         shield = maxShield;
+        shieldFunc = true;
     }
 
     private void SetAttackDir(){
@@ -56,6 +58,7 @@ public class KaraCasaState : MonoBehaviour
 
     public void SetAttackDest(){
         if(attackMode){
+            shieldFunc = true;
             bc2d.enabled = true;
             eStat.SetAttack();
             SetAttackDir();
@@ -92,10 +95,13 @@ public class KaraCasaState : MonoBehaviour
     }
 
     public void Parried(){
-        shield--;
-        if(shield <= 0){
-            AttackCancle();
-            shield = maxShield;
+        if(shieldFunc){
+            shieldFunc = false;
+            shield--;
+            if(shield <= 0){
+                AttackCancle();
+                shield = maxShield;
+            }
         }
     }
 
