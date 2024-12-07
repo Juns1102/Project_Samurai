@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
+using DarkTonic.MasterAudio;
 
 public class WolfState : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class WolfState : MonoBehaviour
 
     private void EndAttack(){
         transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir * 0.6f, -1), 0.3f).SetEase(Ease.Linear).OnComplete(() => bc2d.enabled = false).SetLink(gameObject);
+    }
+
+    private void Attack_Sound(){
+        MasterAudio.PlaySound3DAtTransform("Wolf_Attack", transform);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

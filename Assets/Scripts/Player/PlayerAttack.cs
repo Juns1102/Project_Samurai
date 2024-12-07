@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DarkTonic.MasterAudio;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -36,5 +37,16 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    private void Attack_1_Sound(){
+        MasterAudio.PlaySound3DAtTransform("Attack_1", transform);
+    }
+
+    private void Attack_2_Sound(){
+        MasterAudio.PlaySound3DAtTransform("Attack_2", transform);
+    }
+
+    private void Attack_3_Sound(){
+        MasterAudio.PlaySound3DAtTransform("Attack_3", transform);
+    }
     
 }

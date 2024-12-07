@@ -1,6 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DarkTonic.MasterAudio;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -82,6 +83,10 @@ public class PlayerMove : MonoBehaviour
                 speed += 0.5f;
             }
         }
+    }
+
+    private void MoveSound(){
+        MasterAudio.PlaySound3DAtTransform("Walk", transform);
     }
 
     private void MoveAnim(){

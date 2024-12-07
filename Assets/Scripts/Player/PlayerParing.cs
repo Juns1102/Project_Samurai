@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 using System.Collections;
+using DarkTonic.MasterAudio;
 
 public class PlayerParing : MonoBehaviour
 {
@@ -59,6 +60,14 @@ public class PlayerParing : MonoBehaviour
             anim.SetTrigger("Guard");
             StartCoroutine(paringCoolTime());
         }
+    }
+
+    private void Paring_S_Sound(){
+        MasterAudio.PlaySound3DAtTransform("Paring_S", transform);
+    }
+
+    private void Paring_F_Sound(){
+        MasterAudio.PlaySound3DAtTransform("Paring_F", transform);
     }
 
     public bool GetParing(){
