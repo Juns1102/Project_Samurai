@@ -85,8 +85,12 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private void MoveSound(){
-        MasterAudio.PlaySound3DAtTransform("Walk", transform);
+    private void Move_Sound1(){
+        MasterAudio.PlaySound3DAtTransform("Walk_1", transform);
+    }
+
+    private void Move_Sound2(){
+        MasterAudio.PlaySound3DAtTransform("Walk_2", transform);
     }
 
     private void MoveAnim(){
