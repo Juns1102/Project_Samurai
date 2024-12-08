@@ -148,6 +148,7 @@ public class PlayerMove : MonoBehaviour
             activeSkill = false;
             GameManager.Instance.ResetSkill();
             anim.SetTrigger("Skill");
+            MasterAudio.PlaySound3DAtTransform("Skill", transform);
         }
     }
 
@@ -181,6 +182,7 @@ public class PlayerMove : MonoBehaviour
             if(inputValue != 0){
                 dashCoolTime = 0;
                 anim.SetTrigger("Dodge");
+                MasterAudio.PlaySound3DAtTransform("Dash", transform);
             }
         }
     }

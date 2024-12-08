@@ -76,12 +76,15 @@ public class KaraCasaState : MonoBehaviour
         anim.SetTrigger("Attack");
         SetAttackMode();
         SetAttackDest();
+        MasterAudio.PlaySound3DAtTransform("KaraCasa", transform);
     }//0.3 0.75 1
 
     private void AttackCancle(){
         transform.DOMove(new Vector2(transform.position.x, transform.position.y), 1.2f).SetLink(gameObject);
         bc2d.enabled = false;
         attackMode = false;
+        //MasterAudio.PauseAllSoundsOfTransform(transform);
+        MasterAudio.StopAllSoundsOfTransform(transform);
         anim.SetTrigger("AttackCancle");
     }
 

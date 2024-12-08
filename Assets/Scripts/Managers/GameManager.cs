@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using DarkTonic.MasterAudio;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -22,6 +23,7 @@ public class GameManager : Singleton<GameManager>
 
     public void Damaged(float damage){
         hearts -= damage;
+        MasterAudio.PlaySound3DAtTransform("Damaged", GameObject.Find("Player").transform);
         slider.DOValue(hearts/maxHearts, 0.3f, false);
         if(hearts <= 0){
             GameObject.Find("Player").GetComponent<Animator>().SetTrigger("Dead");
