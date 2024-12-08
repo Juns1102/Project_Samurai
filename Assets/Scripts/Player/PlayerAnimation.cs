@@ -81,7 +81,7 @@ public class PlayerAnimation : MonoBehaviour
             if (pm.GetInputValue() < 0f) {
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            else {
+            else if(pm.GetInputValue() > 0f) {
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             anim.SetTrigger("Attack2");
@@ -97,7 +97,7 @@ public class PlayerAnimation : MonoBehaviour
             if (pm.GetInputValue() < 0f) {
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            else {
+            else if(pm.GetInputValue() > 0f) {
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             anim.SetTrigger("Attack3");
