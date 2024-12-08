@@ -3,20 +3,21 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using DarkTonic.MasterAudio;
 
-public class WolfState : MonoBehaviour
+public class BringerState : MonoBehaviour
 {
     [SerializeField]
     int dir;
     [SerializeField]
     Vector2 targetPos;
     [SerializeField]
-    EnemyChase enemyChase;
+    BringerChase enemyChase;
     BoxCollider2D bc2d;
     SpriteRenderer sr;
     EnemyStat eStat;
 
-    private void Start(){
-        enemyChase = GetComponentInChildren<EnemyChase>();
+    void Start()
+    {
+        enemyChase = GetComponentInChildren<BringerChase>();
         bc2d = transform.GetChild(0).gameObject.GetComponent<BoxCollider2D>();
         sr = GetComponent<SpriteRenderer>();
         eStat = GetComponent<EnemyStat>();
@@ -25,18 +26,17 @@ public class WolfState : MonoBehaviour
     private void SetAttackDir(){
         dir = enemyChase.GetDir();
     }
-    
+
     private void SetAttack(){
         bc2d.enabled = true;
-        transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir, 1), 0.35f).SetEase(Ease.Linear).OnComplete(() => EndAttack()).SetLink(gameObject);
     }
 
     private void EndAttack(){
-        transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir * 0.6f, -1), 0.3f).SetEase(Ease.Linear).OnComplete(() => bc2d.enabled = false).SetLink(gameObject);
+        bc2d.enabled = false;
     }
 
     private void Attack_Sound(){
-        MasterAudio.PlaySound3DAtTransform("Wolf_Attack", transform);
+        MasterAudio.PlaySound3DAtTransform("Bringer_Attack", transform);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
