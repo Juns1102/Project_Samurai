@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.5, y: 0.8}
+  m_Offset: {x: 0.47, y: 0.8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3989880604464288340, guid: 67aaa258814815b419e8f1f3c246e9cb, type: 3}
+  m_Sprite: {fileID: 8498684754911942624, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -291,7 +291,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.8125}
+  m_Offset: {x: -0.03, y: 0.8125}
   m_Size: {x: 0.78, y: 1.625}
   m_Direction: 0
 --- !u!114 &5658971162213661052
@@ -326,7 +326,13 @@ MonoBehaviour:
   isJump: 0
   targetPos: {x: 4, y: 0}
   userCtr: 0
+  DodgeSpeed: 15
+  MaxDodgeSpeed: 0
+  dashMaxCoolTime: 1.2
+  dashCoolTime: 1.2
   inputValue: 0
+  skill_Dir: 0
+  skill_Effect: {fileID: 0}
 --- !u!114 &604594722710523035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,8 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeParing: 1
-  coolTime: 0.4
-  maxCoolTime: 0.4
+  coolTime: 0.1
+  maxCoolTime: 0.1
   paring_BackWards: 5
   onParing: 0
   paringParticle1: {fileID: 5596615054784497116}
@@ -438,7 +444,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.23, y: 0.76}
+  m_Offset: {x: 1.2, y: 0.76}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

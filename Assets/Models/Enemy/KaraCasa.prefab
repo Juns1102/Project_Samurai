@@ -301,8 +301,8 @@ MonoBehaviour:
   destination: 0
   gap: 8
   ease: 4
-  shield: 3
-  maxShield: 3
+  shield: 2
+  maxShield: 2
 --- !u!114 &3603713796576626369
 MonoBehaviour:
   m_ObjectHideFlags: 0
