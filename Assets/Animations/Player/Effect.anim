@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack3
+  m_Name: Effect
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,21 +21,21 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1191787505333049554, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
-    - time: 0.08888889
-      value: {fileID: 2443332286901225916, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
-    - time: 0.17777778
-      value: {fileID: 4977426080270402373, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
-    - time: 0.26666668
-      value: {fileID: 1121791344895753009, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
-    - time: 0.35555556
-      value: {fileID: 1121791344895753009, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+      value: {fileID: -8728621314584991049, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - time: 0.11666667
+      value: {fileID: 8934589534277732542, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - time: 0.23333333
+      value: {fileID: 6872530953132104492, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - time: 0.35
+      value: {fileID: 939911063188981988, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - time: 0.46666667
+      value: {fileID: 939911063188981988, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 90
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -52,17 +52,17 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1191787505333049554, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
-    - {fileID: 2443332286901225916, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
-    - {fileID: 4977426080270402373, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
-    - {fileID: 1121791344895753009, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
-    - {fileID: 1121791344895753009, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - {fileID: -8728621314584991049, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - {fileID: 8934589534277732542, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - {fileID: 6872530953132104492, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - {fileID: 939911063188981988, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
+    - {fileID: 939911063188981988, guid: 8849d9a4e9b392c4b82580d1eb61b104, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.36666667
+    m_StopTime: 0.48333335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -73,7 +73,7 @@ AnimationClip:
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
     m_KeepOriginalOrientation: 0
-    m_KeepOriginalPositionY: 0
+    m_KeepOriginalPositionY: 1
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
     m_Mirror: 0
@@ -83,42 +83,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: AttackForce
+    functionName: StartEffect
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: Start3
+  - time: 0.11666667
+    functionName: EndEffect
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: SetAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.08888889
-    functionName: Attack_3_Sound
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.26666668
-    functionName: EndAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.35555556
-    functionName: End3
+  - time: 0.46666667
+    functionName: EndSkill
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

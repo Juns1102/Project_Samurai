@@ -1,0 +1,1597 @@
+fileFormatVersion: 2
+guid: 8849d9a4e9b392c4b82580d1eb61b104
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8498684754911942624
+    second: Samurai_Remake (3)-Sheet_0
+  - first:
+      213: -788212018913686281
+    second: Samurai_Remake (3)-Sheet_1
+  - first:
+      213: 1499419998022142135
+    second: Samurai_Remake (3)-Sheet_2
+  - first:
+      213: -39820936393211797
+    second: Samurai_Remake (3)-Sheet_3
+  - first:
+      213: 1140504757340960376
+    second: Samurai_Remake (3)-Sheet_4
+  - first:
+      213: 4337819701447464554
+    second: Samurai_Remake (3)-Sheet_5
+  - first:
+      213: -3526584083890958066
+    second: Samurai_Remake (3)-Sheet_6
+  - first:
+      213: -6073068956620882640
+    second: Samurai_Remake (3)-Sheet_7
+  - first:
+      213: -6988204036872912245
+    second: Samurai_Remake (3)-Sheet_8
+  - first:
+      213: 3659056975750095083
+    second: Samurai_Remake (3)-Sheet_9
+  - first:
+      213: 7062112738160455048
+    second: Samurai_Remake (3)-Sheet_10
+  - first:
+      213: 1902548610726445031
+    second: Samurai_Remake (3)-Sheet_11
+  - first:
+      213: 5931039910548086108
+    second: Samurai_Remake (3)-Sheet_12
+  - first:
+      213: 2028375536678717206
+    second: Samurai_Remake (3)-Sheet_13
+  - first:
+      213: 3063986217116214537
+    second: Samurai_Remake (3)-Sheet_14
+  - first:
+      213: -2096642396940491396
+    second: Samurai_Remake (3)-Sheet_15
+  - first:
+      213: 4577344771061337307
+    second: Samurai_Remake (3)-Sheet_16
+  - first:
+      213: -1451303983403327381
+    second: Samurai_Remake (3)-Sheet_17
+  - first:
+      213: 7363353657469647740
+    second: Samurai_Remake (3)-Sheet_18
+  - first:
+      213: -4212996786460282424
+    second: Samurai_Remake (3)-Sheet_19
+  - first:
+      213: -1191787505333049554
+    second: Samurai_Remake (3)-Sheet_20
+  - first:
+      213: 2443332286901225916
+    second: Samurai_Remake (3)-Sheet_21
+  - first:
+      213: 4977426080270402373
+    second: Samurai_Remake (3)-Sheet_22
+  - first:
+      213: 1121791344895753009
+    second: Samurai_Remake (3)-Sheet_23
+  - first:
+      213: 251092669970596609
+    second: Samurai_Remake (3)-Sheet_24
+  - first:
+      213: 4917062262269430839
+    second: Samurai_Remake (3)-Sheet_25
+  - first:
+      213: -1802027652411351153
+    second: Samurai_Remake (3)-Sheet_26
+  - first:
+      213: 3862751983057154478
+    second: Samurai_Remake (3)-Sheet_27
+  - first:
+      213: 8202723240192830443
+    second: Samurai_Remake (3)-Sheet_28
+  - first:
+      213: -7972709414942817116
+    second: Samurai_Remake (3)-Sheet_29
+  - first:
+      213: -5204071710551105222
+    second: Samurai_Remake (3)-Sheet_30
+  - first:
+      213: -5949935061585336065
+    second: Samurai_Remake (3)-Sheet_31
+  - first:
+      213: 5290315309435868675
+    second: Samurai_Remake (3)-Sheet_32
+  - first:
+      213: -5369658728297886159
+    second: Samurai_Remake (3)-Sheet_33
+  - first:
+      213: -7356489966188292713
+    second: Samurai_Remake (3)-Sheet_34
+  - first:
+      213: 412017230110848976
+    second: Samurai_Remake (3)-Sheet_35
+  - first:
+      213: -8728621314584991049
+    second: Samurai_Remake (3)-Sheet_36
+  - first:
+      213: 8934589534277732542
+    second: Samurai_Remake (3)-Sheet_37
+  - first:
+      213: 6872530953132104492
+    second: Samurai_Remake (3)-Sheet_38
+  - first:
+      213: 939911063188981988
+    second: Samurai_Remake (3)-Sheet_39
+  - first:
+      213: -966573888861240600
+    second: Samurai_Remake (3)-Sheet_40
+  - first:
+      213: -8582462676677424361
+    second: Samurai_Remake (3)-Sheet_41
+  - first:
+      213: -119071714112473168
+    second: Samurai_Remake (3)-Sheet_42
+  - first:
+      213: 359504335345767133
+    second: Samurai_Remake (3)-Sheet_43
+  - first:
+      213: 219371492968872885
+    second: Samurai_Remake (3)-Sheet_44
+  - first:
+      213: -2740108727141274240
+    second: Samurai_Remake (3)-Sheet_45
+  - first:
+      213: 8183456532874988953
+    second: Samurai_Remake (3)-Sheet_46
+  - first:
+      213: -6527404831821358352
+    second: Samurai_Remake (3)-Sheet_47
+  - first:
+      213: 8790240878393774704
+    second: Samurai_Remake (3)-Sheet_48
+  - first:
+      213: -3540427913514576200
+    second: Samurai_Remake (3)-Sheet_49
+  - first:
+      213: 7459378629973250914
+    second: Samurai_Remake (3)-Sheet_50
+  - first:
+      213: 1498864550917381870
+    second: Samurai_Remake (3)-Sheet_51
+  - first:
+      213: -6065261526386724376
+    second: Samurai_Remake (3)-Sheet_52
+  - first:
+      213: 6495422935961331698
+    second: Samurai_Remake (3)-Sheet_53
+  - first:
+      213: -5738900330762502946
+    second: Samurai_Remake (3)-Sheet_54
+  - first:
+      213: 94777663265483017
+    second: Samurai_Remake (3)-Sheet_55
+  - first:
+      213: -8469834076488934581
+    second: Samurai_Remake (3)-Sheet_56
+  - first:
+      213: 1899257582832853857
+    second: Samurai_Remake (3)-Sheet_57
+  - first:
+      213: 4962493137339759727
+    second: Samurai_Remake (3)-Sheet_58
+  - first:
+      213: 1419165750908907260
+    second: Samurai_Remake (3)-Sheet_59
+  - first:
+      213: -6364576549853480825
+    second: Samurai_Remake (3)-Sheet_60
+  - first:
+      213: 959482269701222755
+    second: Samurai_Remake (3)-Sheet_61
+  - first:
+      213: -4481563382117150830
+    second: Samurai_Remake (3)-Sheet_62
+  - first:
+      213: 5639668195554842276
+    second: Samurai_Remake (3)-Sheet_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7dd82b1c461f570800000000000000
+      internalID: 8498684754911942624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fcc4fc4855bf05f0800000000000000
+      internalID: -788212018913686281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b80a3f3b820fc410800000000000000
+      internalID: 1499419998022142135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60c8afb117827ff0800000000000000
+      internalID: -39820936393211797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87673fdb803e3df00800000000000000
+      internalID: 1140504757340960376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6697742908033c30800000000000000
+      internalID: 4337819701447464554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e011229d57e0f0fc0800000000000000
+      internalID: -3526584083890958066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03df820e5ff18bba0800000000000000
+      internalID: -6073068956620882640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b824d3c1479e40f90800000000000000
+      internalID: -6988204036872912245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0ef74dee497c230800000000000000
+      internalID: 3659056975750095083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88da0d16e1aa10260800000000000000
+      internalID: 7062112738160455048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef334e91e5376a10800000000000000
+      internalID: 1902548610726445031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 640
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d12e8ef594f4250800000000000000
+      internalID: 5931039910548086108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 640
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617c3d6cdcc362c10800000000000000
+      internalID: 2028375536678717206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 640
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905a7e31b37758a20800000000000000
+      internalID: 3063986217116214537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 640
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75a65539da37e2e0800000000000000
+      internalID: -2096642396940491396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc4a9541def58f30800000000000000
+      internalID: 4577344771061337307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60a22867beebdbe0800000000000000
+      internalID: -1451303983403327381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b3d058323ef2660800000000000000
+      internalID: 7363353657469647740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c13c2f7ebd6885c0800000000000000
+      internalID: -4212996786460282424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27efd8049be57fe0800000000000000
+      internalID: -1191787505333049554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb98df405c578e120800000000000000
+      internalID: 2443332286901225916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543484206ae531540800000000000000
+      internalID: 4977426080270402373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b7e90e847619f00800000000000000
+      internalID: 1121791344895753009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1034d47f37f0c7300800000000000000
+      internalID: 251092669970596609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c4c09631aec3440800000000000000
+      internalID: 4917062262269430839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f179ec569edf6e0800000000000000
+      internalID: -1802027652411351153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1be8d76704b9530800000000000000
+      internalID: 3862751983057154478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 384
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebe88ab35de5d170800000000000000
+      internalID: 8202723240192830443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 384
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4cbe0470f3b5190800000000000000
+      internalID: -7972709414942817116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 384
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3121f20a5c67c7b0800000000000000
+      internalID: -5204071710551105222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 384
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff86099e5959d6da0800000000000000
+      internalID: -5949935061585336065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3065cb0aeb9fa6940800000000000000
+      internalID: 5290315309435868675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e8ab616d32b75b0800000000000000
+      internalID: -5369658728297886159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7951f932a5f78e990800000000000000
+      internalID: -7356489966188292713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d7f812ec77c7b500800000000000000
+      internalID: 412017230110848976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba224d1925bdd680800000000000000
+      internalID: -8728621314584991049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb80c8c08d90efb70800000000000000
+      internalID: 8934589534277732542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2bd0595d72206f50800000000000000
+      internalID: 6872530953132104492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e8c6d1d12c3b0d00800000000000000
+      internalID: 939911063188981988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e202415b2a0692f0800000000000000
+      internalID: -966573888861240600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b089adaa7f4e880800000000000000
+      internalID: -8582462676677424361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7778928e8f85ef0800000000000000
+      internalID: -119071714112473168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd25f7bc9473df400800000000000000
+      internalID: 359504335345767133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 128
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bbb148e53d5b0300800000000000000
+      internalID: 219371492968872885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 128
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08debc061ad29f9d0800000000000000
+      internalID: -2740108727141274240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 128
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d0ddcdb5a719170800000000000000
+      internalID: 8183456532874988953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 128
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa9e1e93eff965a0800000000000000
+      internalID: -6527404831821358352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07257c691853df970800000000000000
+      internalID: 8790240878393774704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b61616129fdddec0800000000000000
+      internalID: -3540427913514576200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26312bca759058760800000000000000
+      internalID: 7459378629973250914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee1bd32e590dc410800000000000000
+      internalID: 1498864550917381870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e130e1e6ccd3dba0800000000000000
+      internalID: -6065261526386724376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f766ebfeb0642a50800000000000000
+      internalID: 6495422935961331698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc778f1e845b50b0800000000000000
+      internalID: -5738900330762502946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samurai_Remake (3)-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 128
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909a49758c7b05100800000000000000
+      internalID: 94777663265483017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 07cfa41a148bd924a8392e747c8f6cfc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Samurai_Remake (3)-Sheet_0: 8498684754911942624
+      Samurai_Remake (3)-Sheet_1: -788212018913686281
+      Samurai_Remake (3)-Sheet_10: 7062112738160455048
+      Samurai_Remake (3)-Sheet_11: 1902548610726445031
+      Samurai_Remake (3)-Sheet_12: 5931039910548086108
+      Samurai_Remake (3)-Sheet_13: 2028375536678717206
+      Samurai_Remake (3)-Sheet_14: 3063986217116214537
+      Samurai_Remake (3)-Sheet_15: -2096642396940491396
+      Samurai_Remake (3)-Sheet_16: 4577344771061337307
+      Samurai_Remake (3)-Sheet_17: -1451303983403327381
+      Samurai_Remake (3)-Sheet_18: 7363353657469647740
+      Samurai_Remake (3)-Sheet_19: -4212996786460282424
+      Samurai_Remake (3)-Sheet_2: 1499419998022142135
+      Samurai_Remake (3)-Sheet_20: -1191787505333049554
+      Samurai_Remake (3)-Sheet_21: 2443332286901225916
+      Samurai_Remake (3)-Sheet_22: 4977426080270402373
+      Samurai_Remake (3)-Sheet_23: 1121791344895753009
+      Samurai_Remake (3)-Sheet_24: 251092669970596609
+      Samurai_Remake (3)-Sheet_25: 4917062262269430839
+      Samurai_Remake (3)-Sheet_26: -1802027652411351153
+      Samurai_Remake (3)-Sheet_27: 3862751983057154478
+      Samurai_Remake (3)-Sheet_28: 8202723240192830443
+      Samurai_Remake (3)-Sheet_29: -7972709414942817116
+      Samurai_Remake (3)-Sheet_3: -39820936393211797
+      Samurai_Remake (3)-Sheet_30: -5204071710551105222
+      Samurai_Remake (3)-Sheet_31: -5949935061585336065
+      Samurai_Remake (3)-Sheet_32: 5290315309435868675
+      Samurai_Remake (3)-Sheet_33: -5369658728297886159
+      Samurai_Remake (3)-Sheet_34: -7356489966188292713
+      Samurai_Remake (3)-Sheet_35: 412017230110848976
+      Samurai_Remake (3)-Sheet_36: -8728621314584991049
+      Samurai_Remake (3)-Sheet_37: 8934589534277732542
+      Samurai_Remake (3)-Sheet_38: 6872530953132104492
+      Samurai_Remake (3)-Sheet_39: 939911063188981988
+      Samurai_Remake (3)-Sheet_4: 1140504757340960376
+      Samurai_Remake (3)-Sheet_40: -966573888861240600
+      Samurai_Remake (3)-Sheet_41: -8582462676677424361
+      Samurai_Remake (3)-Sheet_42: -119071714112473168
+      Samurai_Remake (3)-Sheet_43: 359504335345767133
+      Samurai_Remake (3)-Sheet_44: 219371492968872885
+      Samurai_Remake (3)-Sheet_45: -2740108727141274240
+      Samurai_Remake (3)-Sheet_46: 8183456532874988953
+      Samurai_Remake (3)-Sheet_47: -6527404831821358352
+      Samurai_Remake (3)-Sheet_48: 8790240878393774704
+      Samurai_Remake (3)-Sheet_49: -3540427913514576200
+      Samurai_Remake (3)-Sheet_5: 4337819701447464554
+      Samurai_Remake (3)-Sheet_50: 7459378629973250914
+      Samurai_Remake (3)-Sheet_51: 1498864550917381870
+      Samurai_Remake (3)-Sheet_52: -6065261526386724376
+      Samurai_Remake (3)-Sheet_53: 6495422935961331698
+      Samurai_Remake (3)-Sheet_54: -5738900330762502946
+      Samurai_Remake (3)-Sheet_55: 94777663265483017
+      Samurai_Remake (3)-Sheet_6: -3526584083890958066
+      Samurai_Remake (3)-Sheet_7: -6073068956620882640
+      Samurai_Remake (3)-Sheet_8: -6988204036872912245
+      Samurai_Remake (3)-Sheet_9: 3659056975750095083
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

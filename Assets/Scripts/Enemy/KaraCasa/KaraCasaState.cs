@@ -108,9 +108,17 @@ public class KaraCasaState : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.layer == LayerMask.NameToLayer("PlayerAttack")){
             if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
-                if(!eStat.GetDie()){
-                    eStat.Damaged(1);
-                    Damaged();
+                if(other.CompareTag("PlayerAttack")){
+                    if(!eStat.GetDie()){
+                        eStat.Damaged(1);
+                        Damaged();
+                    }
+                }
+                if(other.CompareTag("Skill_Effect")){
+                    if(!eStat.GetDie()){
+                        eStat.Damaged(5);
+                        Damaged();
+                    }
                 }
             }
         }

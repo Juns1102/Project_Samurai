@@ -17,5 +17,9 @@ public class GameManager : Singleton<GameManager>
     public void Damaged(float damage){
         hearts -= damage;
         slider.DOValue(hearts/maxHearts, 0.3f, false);
+        if(hearts <= 0){
+            GameObject.Find("Player").GetComponent<Animator>().SetTrigger("Dead");
+            GameObject.Find("Player").GetComponent<PlayerMove>().UserCtr_F();
+        }
     }
 }

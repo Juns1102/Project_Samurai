@@ -130,5 +130,6 @@ public class PlayerAnimation : MonoBehaviour
         attack3 = false;
         ready2 = false;
         ready3 = false;
+        gameObject.GetComponentInChildren<BoxCollider2D>().enabled = false;
     }
 }

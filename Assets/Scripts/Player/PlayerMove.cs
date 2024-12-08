@@ -19,14 +19,30 @@ public class PlayerMove : MonoBehaviour
     Vector2 targetPos;
     [SerializeField]
     bool userCtr;
+    [SerializeField]
+    float DodgeSpeed;
+    [SerializeField]
+    float MaxDodgeSpeed;
+    [SerializeField]
+    float dashMaxCoolTime;
+    [SerializeField]
+    float dashCoolTime;
 
     public float inputValue;
+    bool sprint;
+    bool skill;
+    [SerializeField]
+    float skill_Dir;
 
     private Rigidbody2D body;
     private Animator anim;
     private SpriteRenderer spriter;
     private PlayerParing pParing;
     private UIController uiController;
+    private CapsuleCollider2D cp2d;
+    private PlayerAnimation pAnim;
+    [SerializeField]
+    private GameObject skill_Effect;
 
 
     private void Awake() {
@@ -35,6 +51,9 @@ public class PlayerMove : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         pParing = GetComponent<PlayerParing>();
         uiController = GetComponent<UIController>();
+        cp2d = GetComponent<CapsuleCollider2D>();
+        pAnim = GetComponent<PlayerAnimation>();
+        skill_Effect = GameObject.Find("Skill_Effect");
     }
 
     private void Start() {
@@ -45,6 +64,10 @@ public class PlayerMove : MonoBehaviour
         if(userCtr && !uiController.GetPause()){
             Move();
         }
+        if(isJump && body.linearVelocityY < 0){
+            anim.SetTrigger("Jump_Down");
+        }
+        dashCoolTime += Time.fixedDeltaTime;
     }
 
     private void LateUpdate() {
@@ -55,6 +78,10 @@ public class PlayerMove : MonoBehaviour
 
     public bool GetUserCtr(){
         return userCtr;
+    }
+
+    public void UserCtr_F(){
+        userCtr = false;
     }
 
     private void SceneChangeMove(){
@@ -100,18 +127,83 @@ public class PlayerMove : MonoBehaviour
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack2") &&
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3")) && !pParing.GetParing()) {
             if (inputValue < 0f) {
+                skill_Dir = inputValue;
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             else {
+                skill_Dir = inputValue;
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
     }
 
+    private void SetEffect(){
+        skill_Effect.transform.Find("Skill_Effect").gameObject.SetActive(true);
+    }
+
+    private void OnSkill(){
+        if(userCtr){
+            if(inputValue != 0){
+                anim.SetTrigger("Skill");
+            }
+        }
+    }
+
+    private void Skill(){
+        body.linearVelocity = Vector2.zero;
+        userCtr = false;
+        skill = true;
+        pAnim.ResetAttack();
+        pParing.EndParing();
+    }
+
+    private void Skill_Step(){
+        transform.Translate(new Vector2(9, 0));
+    }
+
+    private void EndSkill(){
+        userCtr = true;
+        skill = false;
+    }
+
+    public bool GetSkill(){
+        return skill;
+    }
+
+    private void OnSprint(){
+        if(userCtr && dashCoolTime >= dashMaxCoolTime){
+            dashCoolTime = 0;
+            anim.SetTrigger("Dodge");
+        }
+    }
+
+    private void Sprint(){
+        userCtr = false;
+        sprint = true;
+        body.gravityScale = 0;
+        pAnim.ResetAttack();
+        pParing.EndParing();
+        body.linearVelocity = Vector3.zero;
+        body.AddForceX(DodgeSpeed * inputValue, ForceMode2D.Impulse);
+    }
+
+    private void EndSprint(){
+        userCtr = true;
+        sprint = false;
+        body.gravityScale = 2;
+    }
+
+    public bool GetSprint(){
+        return sprint;
+    }
+
     private void OnJump() {
-        if (!isJump) {
+        if (!isJump && userCtr && anim.GetCurrentAnimatorStateInfo(0).IsName("LocoMotion")) {
+            anim.ResetTrigger("Jump_Down");
+            anim.SetTrigger("Jump_Up");
             body.AddForceY(jumpPower, ForceMode2D.Impulse);
             isJump = true;
+            anim.SetBool("Jump", true);
         }
     }
 
@@ -122,6 +214,7 @@ public class PlayerMove : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.contacts[0].normal.y > 0.7f) {
             isJump = false;
+            anim.SetBool("Jump", false);
         }
     }
 

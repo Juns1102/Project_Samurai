@@ -45,6 +45,12 @@ public class WolfState : MonoBehaviour
                 Damaged();
             }
         }
+        if(other.CompareTag("Skill_Effect")){
+            if(!eStat.GetDie()){
+                eStat.Damaged(5);
+                Damaged();
+            }
+        }
     }
 
     private void Damaged(){
