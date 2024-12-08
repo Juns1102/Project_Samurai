@@ -17,16 +17,22 @@ public class EnemyStat : MonoBehaviour
     [SerializeField]
     GameObject hpCanvas;
     Animator anim;
+    [SerializeField]
+    bool sword;
 
     private void Start() {
         activeAttack = true;
-        slider = transform.GetChild(2).GetChild(0).GetComponent<Slider>();
-        hpCanvas = slider.transform.parent.gameObject;
-        anim = GetComponent<Animator>();
+        if(!sword){
+            slider = transform.GetChild(2).GetChild(0).GetComponent<Slider>();
+            hpCanvas = slider.transform.parent.gameObject;
+            anim = GetComponent<Animator>();
+        }
     }
 
     private void Update() {
-        hpCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
+        if(!sword){
+            hpCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
     public float GetDamage(){
@@ -38,12 +44,14 @@ public class EnemyStat : MonoBehaviour
         }
     }
     public void Damaged(float damage){
-        hearts -= damage;
-        
-        slider.DOValue(hearts/maxHearts, 0.3f, false);
-        if(hearts <= 0){
-            die = true;
-            anim.SetTrigger("Die");
+        if(!sword){
+            hearts -= damage;
+            
+            slider.DOValue(hearts/maxHearts, 0.3f, false);
+            if(hearts <= 0){
+                die = true;
+                anim.SetTrigger("Die");
+            }
         }
     }
 

@@ -14,12 +14,15 @@ public class BossState : MonoBehaviour
     BoxCollider2D bc2d;
     SpriteRenderer sr;
     EnemyStat eStat;
+    GameObject swords;
+
     void Start()
     {
         bossChase = GetComponentInChildren<BossChase>();
         bc2d = transform.GetChild(0).gameObject.GetComponent<BoxCollider2D>();
         sr = GetComponent<SpriteRenderer>();
         eStat = GetComponent<EnemyStat>();
+        swords = GameObject.Find("Swords");
     }
     
     private void SetAttackDir(){
@@ -27,7 +30,7 @@ public class BossState : MonoBehaviour
     }
 
     private void SetAttack(){
-        bc2d.enabled = true;
+        //bc2d.enabled = true;
         //transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir, 1), 0.35f).SetEase(Ease.Linear).OnComplete(() => EndAttack()).SetLink(gameObject);
     }
 
@@ -37,6 +40,10 @@ public class BossState : MonoBehaviour
 
     private void Attack_Sound(){
         //MasterAudio.PlaySound3DAtTransform("Wolf_Attack", transform);
+    }
+
+    private void SetSwoard(){
+
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
