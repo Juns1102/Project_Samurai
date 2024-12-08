@@ -4,14 +4,20 @@ using DG.Tweening;
 public class UIManager : Singleton<UIManager> {
     private GameObject fade;
     private GameObject hpBar;
+    private GameObject skillBar;
 
     private void Start() {
         fade = transform.Find("FadeImg").gameObject;
         hpBar = transform.Find("Hp_Bar").gameObject;
+        skillBar = transform.Find("Skill_Bar").gameObject;
     }
 
     public GameObject GethpBar(){
         return hpBar;
+    }
+
+    public GameObject GetSkillBar(){
+        return skillBar;
     }
 
     public void FadeIn(){

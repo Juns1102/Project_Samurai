@@ -33,6 +33,7 @@ public class PlayerMove : MonoBehaviour
     bool skill;
     [SerializeField]
     float skill_Dir;
+    bool activeSkill;
 
     private Rigidbody2D body;
     private Animator anim;
@@ -54,6 +55,7 @@ public class PlayerMove : MonoBehaviour
         cp2d = GetComponent<CapsuleCollider2D>();
         pAnim = GetComponent<PlayerAnimation>();
         skill_Effect = GameObject.Find("Skill_Effect");
+        activeSkill = true;
     }
 
     private void Start() {
@@ -142,11 +144,15 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void OnSkill(){
-        if(userCtr){
-            if(inputValue != 0){
-                anim.SetTrigger("Skill");
-            }
+        if(userCtr && !isJump && activeSkill){
+            activeSkill = false;
+            GameManager.Instance.ResetSkill();
+            anim.SetTrigger("Skill");
         }
+    }
+
+    public void ActiveSkill(){
+        activeSkill = true;
     }
 
     private void Skill(){
@@ -172,8 +178,10 @@ public class PlayerMove : MonoBehaviour
 
     private void OnSprint(){
         if(userCtr && dashCoolTime >= dashMaxCoolTime){
-            dashCoolTime = 0;
-            anim.SetTrigger("Dodge");
+            if(inputValue != 0){
+                dashCoolTime = 0;
+                anim.SetTrigger("Dodge");
+            }
         }
     }
 
