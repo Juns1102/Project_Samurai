@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private GameObject managers;
     private GameObject hp_Bar;
+    
 
     void Start()
     {

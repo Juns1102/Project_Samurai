@@ -26,6 +26,7 @@ public class GameManager : Singleton<GameManager>
         MasterAudio.PlaySound3DAtTransform("Damaged", GameObject.Find("Player").transform);
         slider.DOValue(hearts/maxHearts, 0.3f, false);
         if(hearts <= 0){
+            MasterAudio.StopAllOfSound("KaraCasa");
             GameObject.Find("Player").GetComponent<Animator>().SetTrigger("Dead");
             GameObject.Find("Player").GetComponent<PlayerMove>().UserCtr_F();
         }
