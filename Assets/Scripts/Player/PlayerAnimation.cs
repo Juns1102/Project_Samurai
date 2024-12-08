@@ -15,10 +15,12 @@ public class PlayerAnimation : MonoBehaviour
 
     private Animator anim;
     private Rigidbody2D rb;
+    private PlayerMove pm;
 
     private void Awake() {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        pm = GetComponent<PlayerMove>();
         attack1 = false;
         attack2 = false;
         attack3 = false;
@@ -76,6 +78,12 @@ public class PlayerAnimation : MonoBehaviour
         attack2 = false;
         attack3 = false;
         if (ready2) {
+            if (pm.GetInputValue() < 0f) {
+                gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else {
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
             anim.SetTrigger("Attack2");
             ready2 = false;
         }
@@ -86,6 +94,12 @@ public class PlayerAnimation : MonoBehaviour
         attack2 = false;
         attack3 = false;
         if (ready3) {
+            if (pm.GetInputValue() < 0f) {
+                gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else {
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
             anim.SetTrigger("Attack3");
             ready3 = false;
         }

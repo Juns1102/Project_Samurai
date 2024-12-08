@@ -96,6 +96,10 @@ public class PlayerMove : MonoBehaviour
         inputValue = value.Get<Vector2>().x;
     }
 
+    public float GetInputValue(){
+        return inputValue;
+    }
+
     private void Move(){
         if (inputValue == 0f) {
             speed = startSpeed;

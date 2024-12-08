@@ -8648,6 +8648,14 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 4702696216338701299, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
+      propertyPath: coolTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702696216338701299, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
+      propertyPath: maxCoolTime
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5585540196961481064, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8670,11 +8678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7528147139508190580, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
       propertyPath: dashCoolTime
-      value: 2
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7528147139508190580, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
       propertyPath: dashMaxCoolTime
-      value: 2
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7947009263041483575, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
       propertyPath: m_LocalPosition.x
