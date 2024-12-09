@@ -332,6 +332,17 @@
                 },
                 {
                     "name": "",
+                    "id": "3e38de94-5e3c-4748-96d0-d51b65ddca5b",
+                    "path": "<Keyboard>/period",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f2e9ba44-c423-42a7-ad56-f20975884794",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -409,6 +420,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b9eac265-676b-4973-9525-be8e48d288eb",
+                    "path": "<Keyboard>/slash",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Paring",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "fdc62d35-1249-4a74-8ec4-17474ebf5417",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -433,6 +455,17 @@
                     "name": "",
                     "id": "52e3e50e-ac8e-46a1-8630-80acdb59e17d",
                     "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a6427152-3eae-4d92-8ef0-f3367768fde7",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

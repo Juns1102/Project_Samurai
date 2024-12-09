@@ -175,7 +175,7 @@ public class PlayerParing : MonoBehaviour
                                 guard = true;
                                 if(!damaged){
                                     GameManager.Instance.Damaged(other.GetComponentInParent<EnemyStat>().GetDamage()*0.5f);
-                                    guard = false; 
+                                    guard = false;
                                     damaged = false;
                                 }
                             }
