@@ -15,6 +15,9 @@ public class BossState : MonoBehaviour
     SpriteRenderer sr;
     EnemyStat eStat;
     GameObject swords;
+    GameObject player;
+    [SerializeField]
+    Ease ease;
 
     void Start()
     {
@@ -23,19 +26,28 @@ public class BossState : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         eStat = GetComponent<EnemyStat>();
         swords = GameObject.Find("Swords");
+        player = GameObject.Find("Player");
     }
     
     private void SetAttackDir(){
-        //dir = bossChase.GetDir();
+        dir = bossChase.GetDir();
+        if (dir < 0f) {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+        else {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if(Mathf.Abs(player.transform.position.x - transform.position.x) >= 4 && Mathf.Abs(player.transform.position.x - transform.position.x) <= 7){
+            transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir, 1), 0.2f).SetEase(ease);
+        }
     }
 
     private void SetAttack(){
-        //bc2d.enabled = true;
-        //transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir, 1), 0.35f).SetEase(Ease.Linear).OnComplete(() => EndAttack()).SetLink(gameObject);
+        bc2d.enabled = true;
     }
 
     private void EndAttack(){
-       //transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir * 0.6f, -1), 0.3f).SetEase(Ease.Linear).OnComplete(() => bc2d.enabled = false).SetLink(gameObject);
+        bc2d.enabled = false;
     }
 
     private void Attack_Sound(){

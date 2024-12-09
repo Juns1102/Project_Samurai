@@ -59,8 +59,8 @@ public class BossAttack : MonoBehaviour
 
     private void Attack(){
         eStat.SetAttack();
-        anim.SetTrigger("Attack3");
-        sf.StartCoroutine("Attack");
+        anim.SetTrigger("Attack1");
+        //sf.StartCoroutine("Attack");
     }//0.3 0.75 1
 
     public bool GetStop(){
