@@ -142,7 +142,9 @@ public class PlayerParing : MonoBehaviour
                                 }
                                 anim.SetTrigger("Paring_S");
                                 BackWards_S(-1f);
-                                GameManager.Instance.Parried(1);
+                                if(other.GetComponentInParent<EnemyStat>().GetDamage() != 0){
+                                    GameManager.Instance.Parried(1);
+                                }
                             }
                         }
                         else{
@@ -155,7 +157,9 @@ public class PlayerParing : MonoBehaviour
                                 }
                                 anim.SetTrigger("Paring_S");
                                 BackWards_S(1f);
-                                GameManager.Instance.Parried(1);
+                                if(other.GetComponentInParent<EnemyStat>().GetDamage() != 0){
+                                    GameManager.Instance.Parried(1);
+                                }
                             }
                         }
                         other.GetComponentInParent<EnemyStat>().AfterAttack();

@@ -43,7 +43,7 @@ public class BossState : MonoBehaviour
     }
 
     private void SetSwoard(){
-
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

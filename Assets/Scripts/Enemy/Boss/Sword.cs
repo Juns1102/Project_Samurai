@@ -18,6 +18,7 @@ public class Sword : MonoBehaviour
     Vector3 direction;
     SpriteRenderer sr;
     BoxCollider2D bc2d;
+    EnemyStat es;
     float dir;
 
     void Start()
@@ -28,6 +29,7 @@ public class Sword : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         bc2d = GetComponent<BoxCollider2D>();
         sr.DOFade(0, 0);
+        es = GetComponent<EnemyStat>();
     }
 
     private void FixedUpdate() {
@@ -54,6 +56,7 @@ public class Sword : MonoBehaviour
     }
 
     void SetAttack(){
+        es.SetAttack();
         sr.DOFade(1, 1f).OnComplete(()=> step1 = true);
         transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
         bc2d.enabled = true;

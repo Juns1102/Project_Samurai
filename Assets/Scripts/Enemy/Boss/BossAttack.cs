@@ -37,7 +37,9 @@ public class BossAttack : MonoBehaviour
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, distance, Vector2.up, 0, 1 << LayerMask.NameToLayer("Player"));
         Debug.DrawRay(transform.position, transform.right * distance, Color.yellow);
         Debug.DrawRay(transform.position, -transform.right * distance, Color.yellow);
-        timeAfterCoolTime += Time.deltaTime;
+        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3")){
+            timeAfterCoolTime += Time.deltaTime;
+        }
 
         if (hit.collider != null) {
             stop = true;

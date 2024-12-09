@@ -33,6 +33,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void Parried(float guage){
+        Debug.Log("asdfasfd");
         skillGuage += guage;
         skillSlider.DOValue(skillGuage/maxSkillGuage, 0.3f, false);
         if(skillGuage >= maxSkillGuage){
