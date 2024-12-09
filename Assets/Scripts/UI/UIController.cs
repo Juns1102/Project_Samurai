@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private GameObject managers;
     private GameObject hp_Bar;
+    private GameObject skill_Bar;
     
 
     void Start()
@@ -24,6 +25,7 @@ public class UIController : MonoBehaviour
         else if(SceneManager.GetActiveScene().name != "Title"){
             managers = GameObject.Find("Managers");
             hp_Bar = GameObject.Find("Hp_Bar");
+            skill_Bar = GameObject.Find("Skill_Bar");
             fade = GameObject.Find("FadeImg");
             fade.GetComponent<CanvasGroup>().alpha = 1;
             fade.SetActive(true);
@@ -56,6 +58,7 @@ public class UIController : MonoBehaviour
         Time.timeScale = 1;
         esc.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear);
         hp_Bar.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear);
+        skill_Bar.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear);
         fade.GetComponent<CanvasGroup>().DOFade(1, 1f).SetEase(Ease.Linear).OnComplete(() => {SceneManager.LoadScene("Title"); FadeInTitle();});
     }
 

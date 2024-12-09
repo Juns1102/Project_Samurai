@@ -13,19 +13,26 @@ public class EnemyStat : MonoBehaviour
     [SerializeField]
     float maxHearts;
     bool die;
+    bool inv;
     Slider slider;
     [SerializeField]
     GameObject hpCanvas;
     Animator anim;
     [SerializeField]
     bool sword;
+    [SerializeField]
+    int attackFunc;
+    PlayerAttack playerAttack;
+    SpriteRenderer sr;
 
     private void Start() {
         activeAttack = true;
+        playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
         if(!sword){
             slider = transform.GetChild(2).GetChild(0).GetComponent<Slider>();
             hpCanvas = slider.transform.parent.gameObject;
             anim = GetComponent<Animator>();
+            sr = GetComponent<SpriteRenderer>();
         }
     }
 
@@ -44,17 +51,34 @@ public class EnemyStat : MonoBehaviour
         }
     }
     public void Damaged(float damage){
-        if(!sword){
-            hearts -= damage;
-            
-            slider.DOValue(hearts/maxHearts, 0.3f, false);
-            if(hearts <= 0){
-                die = true;
-                anim.SetTrigger("Die");
+        if(!sword && !inv){
+            if(attackFunc != playerAttack.GetAF()){
+                attackFunc = playerAttack.GetAF();
+                hearts -= damage;
+                GameManager.Instance.EDamaged();
+                slider.DOValue(hearts/maxHearts, 0.3f, false);
+                DamagedEffect();
+                if(hearts <= 0){
+                    die = true;
+                    anim.SetTrigger("Die");
+                }
             }
         }
     }
 
+    private void SetInv(){
+        inv = true;
+    }
+
+    private void EndInv(){
+        inv = false;
+    }
+
+    private void DamagedEffect(){
+    sr.color = new Color(255f/255f, 130f/255f, 130f/255f);
+    transform.DOShakePosition(0.1f, new Vector2(0.3f, 0), 10, 90, false, true, ShakeRandomnessMode.Full).OnComplete(() => sr.color = new Color(1, 1, 1)).SetLink(gameObject);
+    }
+    
     public bool GetDie(){
         return die;
     }

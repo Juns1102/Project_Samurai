@@ -37,7 +37,7 @@ public class BossState : MonoBehaviour
         else {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if(Mathf.Abs(player.transform.position.x - transform.position.x) >= 4 && Mathf.Abs(player.transform.position.x - transform.position.x) <= 7){
+        if(Mathf.Abs(player.transform.position.x - transform.position.x) >= 4 && Mathf.Abs(player.transform.position.x - transform.position.x) <= 10){
             transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir, 1), 0.2f).SetEase(ease);
         }
     }
@@ -58,23 +58,29 @@ public class BossState : MonoBehaviour
         
     }
 
+    private void SetPos(){
+        if(player.transform.position.x < transform.position.x){
+            transform.position = player.transform.position + new Vector3(-2, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else{
+            transform.position = player.transform.position + new Vector3(2, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("PlayerAttack")){
             if(!eStat.GetDie()){
                 eStat.Damaged(1);
-                Damaged();
             }
         }
         if(other.CompareTag("Skill_Effect")){
             if(!eStat.GetDie()){
                 eStat.Damaged(5);
-                Damaged();
             }
         }
     }
 
-    private void Damaged(){
-        sr.color = new Color(255f/255f, 130f/255f, 130f/255f);
-        transform.DOShakePosition(0.1f, new Vector2(0.3f, 0), 10, 90, false, true, ShakeRandomnessMode.Full).OnComplete(() => sr.color = new Color(1, 1, 1)).SetLink(gameObject);
-    }
+
 }

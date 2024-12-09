@@ -221,3 +221,4 @@ MonoBehaviour:
   maxHearts: 0
   hpCanvas: {fileID: 0}
   sword: 1
+  attackFunc: 0

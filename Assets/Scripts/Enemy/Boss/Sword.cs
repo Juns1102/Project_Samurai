@@ -62,7 +62,7 @@ public class Sword : MonoBehaviour
 
     void SetAttack(){
         es.SetAttack();
-        sr.DOFade(1, 1f).OnComplete(()=> step1 = true);
+        sr.DOFade(1, 1f).OnComplete(()=> step1 = true).SetLink(gameObject);
         if(boss != null){
             transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
         }
@@ -82,6 +82,7 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.layer == LayerMask.NameToLayer("Platform")){
+            es.AfterAttack();
             body.linearVelocity = Vector2.zero;
             bc2d.enabled = false;
             StartCoroutine(EndAttack());
@@ -90,7 +91,7 @@ public class Sword : MonoBehaviour
 
     IEnumerator EndAttack(){
         yield return new WaitForSeconds(3f);
-        sr.DOFade(0, 0);
+        sr.DOFade(0, 0).SetLink(gameObject);
         gameObject.SetActive(false);
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }

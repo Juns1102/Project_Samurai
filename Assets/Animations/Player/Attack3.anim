@@ -97,14 +97,21 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: SetAttack
+    functionName: Attack_3_Sound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.044444446
+    functionName: AttackFunc
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.08888889
-    functionName: Attack_3_Sound
+    functionName: SetAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

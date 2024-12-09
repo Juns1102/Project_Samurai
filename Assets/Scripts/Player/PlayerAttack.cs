@@ -5,6 +5,8 @@ using DarkTonic.MasterAudio;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [SerializeField]
+    private int attackFunc;
     private Animator anim;
     private PlayerAnimation pAnim;
     private PlayerMove pm;
@@ -35,6 +37,14 @@ public class PlayerAttack : MonoBehaviour
                 pAnim.Ready3();
             }
         }
+    }
+
+    private void AttackFunc(){
+        attackFunc++;
+    }
+
+    public int GetAF(){
+        return attackFunc;
     }
 
     private void Attack_1_Sound(){
