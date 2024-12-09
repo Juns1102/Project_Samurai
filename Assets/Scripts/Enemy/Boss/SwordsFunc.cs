@@ -65,4 +65,10 @@ public class SwordsFunc : MonoBehaviour
         }
         sword5.SetActive(true);
     }
+    
+    private void Update() {
+        if(boss.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Die")){
+            Destroy(gameObject);
+        }
+    }
 }

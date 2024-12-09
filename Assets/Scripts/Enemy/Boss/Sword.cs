@@ -33,11 +33,16 @@ public class Sword : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if(player.transform.position.x < boss.transform.position.x){
-            dir = -1f;
+        if(boss != null){
+            if(player.transform.position.x < boss.transform.position.x){
+                dir = -1f;
+            }
+            else{
+                dir = 1f;
+            }
         }
         else{
-            dir = 1f;
+            Destroy(transform.parent.gameObject);
         }
         if(step1){
             if(set1 < 0.5f){
@@ -45,7 +50,7 @@ public class Sword : MonoBehaviour
                 Vector3 rotation = transform.position - player.transform.position + new Vector3(0, 0.75f, 0);
                 float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
                 direction = player.transform.position + new Vector3(0, 0.75f, 0) - transform.position;
-                transform.DORotate(new Vector3(0, 0, rotationZ + 90), 0.4f);
+                transform.DORotate(new Vector3(0, 0, rotationZ + 90), 0.4f).SetLink(gameObject);
             }
             else{
                 step1 = false;
@@ -58,7 +63,9 @@ public class Sword : MonoBehaviour
     void SetAttack(){
         es.SetAttack();
         sr.DOFade(1, 1f).OnComplete(()=> step1 = true);
-        transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
+        if(boss != null){
+            transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
+        }
         bc2d.enabled = true;
     }
 
