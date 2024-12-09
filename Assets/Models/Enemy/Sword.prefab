@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9ffd9d76cf80348a53a2bdf7387e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 8
   activeAttack: 0
   hearts: 0
   maxHearts: 0

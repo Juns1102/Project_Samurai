@@ -6915,8 +6915,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   activeAttack: 0
-  hearts: 40
-  maxHearts: 40
+  hearts: 80
+  maxHearts: 80
   hpCanvas: {fileID: 0}
   sword: 0
 --- !u!114 &1650094687
