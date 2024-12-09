@@ -27,7 +27,7 @@ public class Sword : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         bc2d = GetComponent<BoxCollider2D>();
-        resetPos = transform.position;
+        sr.DOFade(0, 0);
     }
 
     private void FixedUpdate() {
@@ -54,16 +54,9 @@ public class Sword : MonoBehaviour
     }
 
     void SetAttack(){
-        sr.DOFade(1, 0.5f).OnComplete(()=> step1 = true);
+        sr.DOFade(1, 1f).OnComplete(()=> step1 = true);
         transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
         bc2d.enabled = true;
-    }
-
-    void SetAttack2(){
-        Vector3 rotation = transform.position - player.transform.position + new Vector3(0, 0.75f, 0);
-        float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        direction = player.transform.position + new Vector3(0, 0.75f, 0) - transform.position;
-        transform.DORotate(new Vector3(0, 0, rotationZ + 90), 1f).OnComplete(()=> Attack()).SetLink(gameObject);
     }
 
     void Attack(){
