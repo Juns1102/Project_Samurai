@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fefb34349c31d94aaa8c8f4987a1078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolTime: 10
+  coolTime: 4
   timeAfterCoolTime: 0
   stop: 0
   distance: 6
@@ -6919,6 +6919,7 @@ MonoBehaviour:
   maxHearts: 80
   hpCanvas: {fileID: 0}
   sword: 0
+  attackFunc: 0
 --- !u!114 &1650094687
 MonoBehaviour:
   m_ObjectHideFlags: 0
