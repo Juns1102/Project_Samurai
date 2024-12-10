@@ -24,6 +24,7 @@ public class Sword : MonoBehaviour
     float dir;
     [SerializeField]
     int mode;
+    Vector3 targetPos;
 
     void Start()
     {
@@ -81,6 +82,10 @@ public class Sword : MonoBehaviour
         }
     }
 
+    public void TargetPos(Vector3 targetPos){
+        this.targetPos = targetPos;
+    }
+
     void SetAttack(){
         es.SetAttack();
         sr.DOFade(1, 1f).OnComplete(()=> step1 = true).SetLink(gameObject);
@@ -89,7 +94,7 @@ public class Sword : MonoBehaviour
                 transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
             }
             else{
-                transform.position = player.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
+                transform.position = targetPos + new Vector3(resetPos.x * dir, resetPos.y, 0);
             }
         }
         bc2d.enabled = true;
