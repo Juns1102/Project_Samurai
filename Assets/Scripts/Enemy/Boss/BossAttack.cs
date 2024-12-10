@@ -20,6 +20,7 @@ public class BossAttack : MonoBehaviour
     BossChase enemyChase;
     EnemyStat eStat;
     SwordsFunc sf;
+    SwordsFunc sf2;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class BossAttack : MonoBehaviour
         bc2d = GetComponent<BoxCollider2D>();
         eStat = GetComponentInParent<EnemyStat>();
         sf = GameObject.Find("Swords").GetComponent<SwordsFunc>();
+        sf2 = GameObject.Find("Swords2").GetComponent<SwordsFunc>();
     }
 
     // Update is called once per frame
@@ -64,15 +66,19 @@ public class BossAttack : MonoBehaviour
     private void Attack(){
         percent = Random.Range(0, 100);
         eStat.SetAttack();
-        if(percent < 33){
+        if(percent < 25){
             anim.SetTrigger("Attack1");
         }
-        else if(percent >= 33 && percent < 66){
+        else if(percent >= 25 && percent < 50){
             anim.SetTrigger("Attack2");
         }
-        else if(percent >= 66){
+        else if(percent >= 50 && percent < 75){
             anim.SetTrigger("Attack3");
             sf.StartCoroutine("Attack");
+        }
+        else if(percent >= 75){
+            anim.SetTrigger("Attack3");
+            sf2.StartCoroutine("Attack2");
         }
     }//0.3 0.75 1
 

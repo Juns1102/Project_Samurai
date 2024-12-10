@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 using System.Collections;
+using Unity.Cinemachine;
 
 public class Sword : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class Sword : MonoBehaviour
     SpriteRenderer sr;
     BoxCollider2D bc2d;
     EnemyStat es;
+    Camera cam;
     float dir;
+    [SerializeField]
+    int mode;
 
     void Start()
     {
@@ -30,6 +34,7 @@ public class Sword : MonoBehaviour
         bc2d = GetComponent<BoxCollider2D>();
         sr.DOFade(0, 0);
         es = GetComponent<EnemyStat>();
+        cam = Camera.main;
     }
 
     private void FixedUpdate() {
@@ -45,17 +50,33 @@ public class Sword : MonoBehaviour
             Destroy(transform.parent.gameObject);
         }
         if(step1){
-            if(set1 < 0.5f){
-                set1 += Time.deltaTime;
-                Vector3 rotation = transform.position - player.transform.position + new Vector3(0, 0.75f, 0);
-                float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-                direction = player.transform.position + new Vector3(0, 0.75f, 0) - transform.position;
-                transform.DORotate(new Vector3(0, 0, rotationZ + 90), 0.4f).SetLink(gameObject);
+            if(mode == 0){
+                if(set1 < 0.5f){
+                    set1 += Time.deltaTime;
+                    Vector3 rotation = transform.position - player.transform.position + new Vector3(0, 0.75f, 0);
+                    float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+                    direction = player.transform.position + new Vector3(0, 0.75f, 0) - transform.position;
+                    transform.DORotate(new Vector3(0, 0, rotationZ + 90), 0.4f).SetLink(gameObject);
+                }
+                else{
+                    step1 = false;
+                    set1 = 0;
+                    Attack();
+                }
             }
             else{
-                step1 = false;
-                set1 = 0;
-                Attack();
+                if(set1 < 2.1f){
+                    set1 += Time.deltaTime;
+                    Vector3 rotation = transform.position - player.transform.position + new Vector3(0, 0.75f, 0);
+                    float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+                    direction = player.transform.position + new Vector3(0, 0.75f, 0) - transform.position;
+                    transform.DORotate(new Vector3(0, 0, rotationZ + 90), 0.4f).SetLink(gameObject);
+                }
+                else{
+                    step1 = false;
+                    set1 = 0;
+                    Attack();
+                }
             }
         }
     }
@@ -64,7 +85,12 @@ public class Sword : MonoBehaviour
         es.SetAttack();
         sr.DOFade(1, 1f).OnComplete(()=> step1 = true).SetLink(gameObject);
         if(boss != null){
-            transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
+            if(mode == 0){
+                transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
+            }
+            else{
+                transform.position = player.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
+            }
         }
         bc2d.enabled = true;
     }
@@ -91,8 +117,6 @@ public class Sword : MonoBehaviour
 
     IEnumerator EndAttack(){
         yield return new WaitForSeconds(3f);
-        sr.DOFade(0, 0).SetLink(gameObject);
-        gameObject.SetActive(false);
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+        sr.DOFade(0, 0.1f).OnComplete(()=> {gameObject.SetActive(false); transform.rotation = Quaternion.Euler(0, 0, 0);}).SetLink(gameObject);
     }
 }

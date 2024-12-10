@@ -1,9 +1,11 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class SwordsFunc : MonoBehaviour
 {
+    int[] orders;
     GameObject sword1;
     GameObject sword2;
     GameObject sword3;
@@ -64,6 +66,98 @@ public class SwordsFunc : MonoBehaviour
             sword5.GetComponent<SpriteRenderer>().flipX = true;
         }
         sword5.SetActive(true);
+    }
+
+    IEnumerator Attack2(){
+        int randomNumber = Random.Range(0, 1);
+        for(int i=0; i < 5; i++){
+            if(i == 2){
+                if(transform.position.x > player.transform.position.x){
+                    sword1.GetComponent<SpriteRenderer>().flipX = false;
+                }
+                else{
+                    sword1.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                sword1.SetActive(true);
+            }
+            else if(i == 1){
+                if(randomNumber == 0){
+                    if(transform.position.x > player.transform.position.x){
+                        sword2.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else{
+                        sword2.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+                else{
+                    if(transform.position.x > player.transform.position.x){
+                        sword3.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else{
+                        sword3.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+                sword2.SetActive(true);
+            }
+            else if(i == 3){
+                if(randomNumber == 0){
+                    if(transform.position.x > player.transform.position.x){
+                        sword3.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else{
+                        sword3.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+                else{
+                    if(transform.position.x > player.transform.position.x){
+                        sword2.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else{
+                        sword2.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+                sword3.SetActive(true);
+            }
+            else if(i == 0){
+                if(randomNumber == 0){
+                    if(transform.position.x > player.transform.position.x){
+                        sword4.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else{
+                        sword4.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+                else{
+                    if(transform.position.x > player.transform.position.x){
+                        sword5.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else{
+                        sword5.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+                sword4.SetActive(true);
+            }
+            else if(i == 4){
+                if(randomNumber == 0){
+                    if(transform.position.x > player.transform.position.x){
+                        sword5.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else{
+                        sword5.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+                else{
+                    if(transform.position.x > player.transform.position.x){
+                        sword4.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else{
+                        sword4.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                }
+                sword5.SetActive(true);
+            }
+            yield return new WaitForSeconds(0.4f);
+        }//-32
     }
     
     private void Update() {
