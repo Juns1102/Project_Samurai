@@ -37,7 +37,7 @@ public class BossState : MonoBehaviour
         else {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if(Mathf.Abs(player.transform.position.x - transform.position.x) >= 4 && Mathf.Abs(player.transform.position.x - transform.position.x) <= 10){
+        if(Mathf.Abs(player.transform.position.x - transform.position.x) >= 4){
             transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir, 1), 0.2f).SetEase(ease);
         }
     }
@@ -54,7 +54,13 @@ public class BossState : MonoBehaviour
         //MasterAudio.PlaySound3DAtTransform("Wolf_Attack", transform);
     }
 
-    private void SetSwoard(){
+    private void SetSwoardE1(){
+        
+    }
+    private void SetSwoardE2(){
+        
+    }
+    private void SetSwoardE3(){
         
     }
 

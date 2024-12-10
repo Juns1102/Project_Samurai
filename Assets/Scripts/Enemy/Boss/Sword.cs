@@ -66,7 +66,7 @@ public class Sword : MonoBehaviour
                 }
             }
             else{
-                if(set1 < 2.1f){
+                if(set1 < 0.5f){
                     set1 += Time.deltaTime;
                     Vector3 rotation = transform.position - player.transform.position + new Vector3(0, 0.75f, 0);
                     float rotationZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;

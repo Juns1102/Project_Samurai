@@ -108,6 +108,7 @@ MonoBehaviour:
   player: {fileID: 0}
   boss: {fileID: 0}
   resetPos: {x: 0, y: 0}
+  mode: 0
 --- !u!95 &3053420698435690282
 Animator:
   serializedVersion: 7

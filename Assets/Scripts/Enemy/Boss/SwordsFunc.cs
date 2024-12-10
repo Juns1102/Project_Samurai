@@ -171,7 +171,7 @@ public class SwordsFunc : MonoBehaviour
                     sword4.SetActive(true);
                 }
             }
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.5f);
         }//-32
     }
     

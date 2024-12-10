@@ -21,17 +21,18 @@ public class BossAttack : MonoBehaviour
     EnemyStat eStat;
     SwordsFunc sf;
     SwordsFunc sf2;
+    GameObject player;
 
     void Start()
     {
         boss = transform.parent.gameObject;
         anim = GetComponentInParent<Animator>();
         enemyChase = boss.GetComponentInChildren<BossChase>();
-        timeAfterCoolTime = coolTime;
         bc2d = GetComponent<BoxCollider2D>();
         eStat = GetComponentInParent<EnemyStat>();
         sf = GameObject.Find("Swords").GetComponent<SwordsFunc>();
         sf2 = GameObject.Find("Swords2").GetComponent<SwordsFunc>();
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -40,28 +41,38 @@ public class BossAttack : MonoBehaviour
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, distance, Vector2.up, 0, 1 << LayerMask.NameToLayer("Player"));
         Debug.DrawRay(transform.position, transform.right * distance, Color.yellow);
         Debug.DrawRay(transform.position, -transform.right * distance, Color.yellow);
-        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") &&!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3")){
+        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") &&
+         !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") &&
+         !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3")){
             timeAfterCoolTime += Time.deltaTime;
         }
 
         if (hit.collider != null) {
-            stop = true;
+            if(Mathf.Abs(player.transform.position.x - transform.position.x) <= 6){
+                stop = true;
+            }
+            else{
+                stop = false;
+                if(timeAfterCoolTime >= coolTime){
+                    anim.SetTrigger("Attack2");
+                    timeAfterCoolTime = 0f;
+                }
+            }
             boss.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") &&
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") &&
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3") && 
-            timeAfterCoolTime >= coolTime) {
+            timeAfterCoolTime >= coolTime && stop) {
                 if(!eStat.GetDie()){
                     Attack();
                     timeAfterCoolTime = 0f;
                 }
             }
         }
-        else {
-            stop = false;
-        }
+        // else {
+        //     stop = false;
+        // }
     }
-
- 
 
     private void Attack(){
         percent = Random.Range(0, 100);
