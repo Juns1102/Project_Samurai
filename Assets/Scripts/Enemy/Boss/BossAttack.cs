@@ -43,7 +43,8 @@ public class BossAttack : MonoBehaviour
         Debug.DrawRay(transform.position, -transform.right * distance, Color.yellow);
         if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") &&
          !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") &&
-         !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3")){
+         !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3") &&
+         !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_4")){
             timeAfterCoolTime += Time.deltaTime;
         }
 
@@ -62,6 +63,7 @@ public class BossAttack : MonoBehaviour
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") &&
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") &&
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3") && 
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_4") &&
             timeAfterCoolTime >= coolTime && stop) {
                 if(!eStat.GetDie()){
                     Attack();
@@ -79,19 +81,22 @@ public class BossAttack : MonoBehaviour
     private void Attack(){
         percent = Random.Range(0, 100);
         eStat.SetAttack();
-        if(percent < 25){
+        if(percent < 20){
             anim.SetTrigger("Attack1");
         }
-        else if(percent >= 25 && percent < 50){
+        else if(percent >= 20 && percent < 40){
             anim.SetTrigger("Attack2");
         }
-        else if(percent >= 50 && percent < 75){
+        else if(percent >= 40 && percent < 60){
             anim.SetTrigger("Attack3");
             sf.StartCoroutine("Attack");
         }
-        else if(percent >= 75){
+        else if(percent >= 60 && percent < 80){
             anim.SetTrigger("Attack3");
             sf2.StartCoroutine("Attack2");
+        }
+        else if(percent >= 80){
+            anim.SetTrigger("Attack4");
         }
     }//0.3 0.75 1
 

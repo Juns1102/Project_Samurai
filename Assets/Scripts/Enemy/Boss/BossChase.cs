@@ -39,7 +39,9 @@ public class BossChase : MonoBehaviour
 
     private void Move(){
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") &&
-        !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3") && !bossAttack.GetStop()) {
+        !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") &&
+        !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3") &&
+        !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_4") && !bossAttack.GetStop()) {
             body.linearVelocityX = dir * speed;
         }
     }
@@ -53,7 +55,9 @@ public class BossChase : MonoBehaviour
         }
 
         if (dir != 0f && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") && 
-        !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3")) {
+        !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") && 
+        !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3") && 
+        !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_4")) {
             if (dir < 0f) {
                 body.transform.rotation = Quaternion.Euler(0, 180, 0);
             }

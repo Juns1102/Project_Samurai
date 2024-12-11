@@ -58,7 +58,14 @@ public class BossState : MonoBehaviour
     }
 
     private void SetAttack4(){
-        
+        if(player.transform.position.x < transform.position.x){
+            transform.position = new Vector3(14, transform.position.y, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else{
+            transform.position = new Vector3(-14, transform.position.y, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
     private void SetSwordE1(){
