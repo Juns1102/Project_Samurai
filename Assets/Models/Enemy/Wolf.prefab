@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 2511078275184564870}
   - component: {fileID: 5787219399481954614}
   - component: {fileID: 6111033410493757239}
+  - component: {fileID: 2132896227141319145}
   - component: {fileID: 10620227821291422}
   m_Layer: 8
   m_Name: Wolf
@@ -318,7 +319,28 @@ MonoBehaviour:
   activeAttack: 1
   hearts: 6
   maxHearts: 6
+  trap: 1
   hpCanvas: {fileID: 0}
+  sword: 0
+  boss: 0
+  attackFunc: 0
+  playerAttack: {fileID: 0}
+--- !u!114 &2132896227141319145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082789649985537715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61f9e50f0084914fbec9c58640cef09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: 1
+  gap: 0
+  originEnemy1: {fileID: 6469827372586514873, guid: 2f7493f170961a04383b2529387b205b, type: 3}
+  originEnemy2: {fileID: 7734317328050618988, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
 --- !u!114 &10620227821291422
 MonoBehaviour:
   m_ObjectHideFlags: 0

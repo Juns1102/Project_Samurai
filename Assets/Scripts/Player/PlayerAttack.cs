@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DarkTonic.MasterAudio;
+using DG.Tweening;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -11,13 +12,29 @@ public class PlayerAttack : MonoBehaviour
     private PlayerAnimation pAnim;
     private PlayerMove pm;
     private UIController uIController;
+    // private EasingFunction.Ease ease;
+    // private EasingFunction.Function func;
+
+    // float a;
+    // float runTime;
 
     private void Awake() {
         anim = GetComponent<Animator>();
         pAnim = GetComponent<PlayerAnimation>();
         pm = GetComponent<PlayerMove>();
         uIController = GetComponent<UIController>();
+        // ease = EasingFunction.Ease.EaseInOutQuad;
+        // func = EasingFunction.GetEasingFunction(ease);
     }
+
+    // private void FixedUpdate() {
+    //     a = func(0, 10, runTime/2f);
+    //     runTime += Time.deltaTime;
+    //     if(runTime >= 2){
+    //         runTime = 0;
+    //     }
+    //     rb.linearVelocityX = a;
+    // }
 
     private void OnAttack() {
         if(!uIController.GetPause() && pm.GetUserCtr()){

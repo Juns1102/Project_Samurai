@@ -359,8 +359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeParing: 1
-  coolTime: 0.1
-  maxCoolTime: 0.1
+  coolTime: 0.4
+  maxCoolTime: 0.4
   paring_BackWards: 5
   onParing: 0
   paringParticle1: {fileID: 5596615054784497116}
@@ -445,7 +445,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.2, y: 0.76}
+  m_Offset: {x: 1.32, y: 0.76}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -455,7 +455,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.42, y: 1.46}
+  m_Size: {x: 1.7, y: 1.46}
   m_EdgeRadius: 0
 --- !u!1001 &5656954483163193557
 PrefabInstance:

@@ -143,6 +143,10 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    private void OnHeal(){
+        GameManager.Instance.Heal();
+    }
+
     private void SetEffect(){
         skill_Effect.transform.Find("Skill_Effect").gameObject.SetActive(true);
     }

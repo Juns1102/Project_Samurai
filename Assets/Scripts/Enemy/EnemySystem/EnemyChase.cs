@@ -38,7 +38,7 @@ public class EnemyChase : MonoBehaviour
     }
 
     private void Move(){
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && !wolfAttack.GetStop()) {
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Start") && !wolfAttack.GetStop()) {
             body.linearVelocityX = dir * speed;
         }
     }

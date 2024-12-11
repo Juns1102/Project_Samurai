@@ -14,6 +14,8 @@ public class EnemyStat : MonoBehaviour
     float maxHearts;
     bool die;
     bool inv;
+    [SerializeField]
+    bool trap;
     Slider slider;
     [SerializeField]
     GameObject hpCanvas;
@@ -21,15 +23,26 @@ public class EnemyStat : MonoBehaviour
     [SerializeField]
     bool sword;
     [SerializeField]
+    bool boss;
+    [SerializeField]
     int attackFunc;
+    [SerializeField]
     PlayerAttack playerAttack;
     SpriteRenderer sr;
+    Trap monsterTrap;
 
     private void Start() {
         activeAttack = true;
         playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
         if(!sword){
-            slider = transform.GetChild(2).GetChild(0).GetComponent<Slider>();
+            if(boss){
+                slider = GameObject.Find("Boss_Hp_Bar").GetComponent<Slider>();
+                slider.DOValue(hearts/maxHearts, 0f, false);
+            }
+            else{
+                slider = transform.GetChild(2).GetChild(0).GetComponent<Slider>();
+                monsterTrap = GetComponent<Trap>();
+            }
             hpCanvas = slider.transform.parent.gameObject;
             anim = GetComponent<Animator>();
             sr = GetComponent<SpriteRenderer>();
@@ -37,7 +50,7 @@ public class EnemyStat : MonoBehaviour
     }
 
     private void Update() {
-        if(!sword){
+        if(!sword && !boss){
             hpCanvas.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
         }
     }
@@ -60,6 +73,9 @@ public class EnemyStat : MonoBehaviour
                 DamagedEffect();
                 if(hearts <= 0){
                     die = true;
+                    if(trap){
+                        monsterTrap.OnTrap();
+                    }
                     anim.SetTrigger("Die");
                 }
             }
