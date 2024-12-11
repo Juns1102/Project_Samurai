@@ -81,11 +81,11 @@ public class BossState : MonoBehaviour
     private void SetPos(){
         if(player.transform.position.x < transform.position.x){
             transform.position = player.transform.position + new Vector3(-2, 0, 0);
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else{
             transform.position = player.transform.position + new Vector3(2, 0, 0);
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 
