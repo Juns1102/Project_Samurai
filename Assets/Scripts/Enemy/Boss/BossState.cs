@@ -57,6 +57,10 @@ public class BossState : MonoBehaviour
         //MasterAudio.PlaySound3DAtTransform("Wolf_Attack", transform);
     }
 
+    private void SetAttack4(){
+        
+    }
+
     private void SetSwordE1(){
         sef.Effect1();
     }
