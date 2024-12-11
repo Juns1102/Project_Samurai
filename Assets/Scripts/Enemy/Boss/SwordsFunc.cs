@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class SwordsFunc : MonoBehaviour
 {
-    int[] orders;
     GameObject sword1;
     GameObject sword2;
     GameObject sword3;

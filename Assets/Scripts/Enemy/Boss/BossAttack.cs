@@ -74,6 +74,8 @@ public class BossAttack : MonoBehaviour
         // }
     }
 
+    
+
     private void Attack(){
         percent = Random.Range(0, 100);
         eStat.SetAttack();

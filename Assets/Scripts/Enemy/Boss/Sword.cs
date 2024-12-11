@@ -1,7 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
 using System.Collections;
-using Unity.Cinemachine;
 
 public class Sword : MonoBehaviour
 {
@@ -20,7 +19,6 @@ public class Sword : MonoBehaviour
     SpriteRenderer sr;
     BoxCollider2D bc2d;
     EnemyStat es;
-    Camera cam;
     float dir;
     [SerializeField]
     int mode;
@@ -35,7 +33,6 @@ public class Sword : MonoBehaviour
         bc2d = GetComponent<BoxCollider2D>();
         sr.DOFade(0, 0);
         es = GetComponent<EnemyStat>();
-        cam = Camera.main;
     }
 
     private void FixedUpdate() {
@@ -88,7 +85,6 @@ public class Sword : MonoBehaviour
 
     void SetAttack(){
         es.SetAttack();
-        sr.DOFade(1, 1f).OnComplete(()=> step1 = true).SetLink(gameObject);
         if(boss != null){
             if(mode == 0){
                 transform.position = boss.transform.position + new Vector3(resetPos.x * dir, resetPos.y, 0);
@@ -97,6 +93,7 @@ public class Sword : MonoBehaviour
                 transform.position = targetPos + new Vector3(resetPos.x * dir, resetPos.y, 0);
             }
         }
+        sr.DOFade(1, 1f).OnComplete(()=> step1 = true).SetLink(gameObject);
         bc2d.enabled = true;
     }
 

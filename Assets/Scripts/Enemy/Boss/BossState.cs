@@ -18,6 +18,8 @@ public class BossState : MonoBehaviour
     GameObject player;
     [SerializeField]
     Ease ease;
+    SwordEffectFunc sef;
+
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class BossState : MonoBehaviour
         eStat = GetComponent<EnemyStat>();
         swords = GameObject.Find("Swords");
         player = GameObject.Find("Player");
+        sef = GameObject.Find("SwordEffects").GetComponent<SwordEffectFunc>();
     }
     
     private void SetAttackDir(){
@@ -38,7 +41,7 @@ public class BossState : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if(Mathf.Abs(player.transform.position.x - transform.position.x) >= 4){
-            transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir, 1), 0.2f).SetEase(ease);
+            transform.DOMove((Vector2)transform.position + targetPos * new Vector2(dir, 1), 0.2f).SetEase(ease).SetLink(gameObject);
         }
     }
 
@@ -54,14 +57,14 @@ public class BossState : MonoBehaviour
         //MasterAudio.PlaySound3DAtTransform("Wolf_Attack", transform);
     }
 
-    private void SetSwoardE1(){
-        
+    private void SetSwordE1(){
+        sef.Effect1();
     }
-    private void SetSwoardE2(){
-        
+    private void SetSwordE2(){
+        sef.Effect2();
     }
-    private void SetSwoardE3(){
-        
+    private void SetSwordE3(){
+        sef.Effect3();
     }
 
     private void SetPos(){

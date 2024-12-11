@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2410440844603455515}
   - component: {fileID: 6289237466248132484}
-  - component: {fileID: 7375600016872744787}
   - component: {fileID: 3053420698435690282}
   - component: {fileID: 3304096723893654177}
   - component: {fileID: 4491146870101636711}
+  - component: {fileID: 7375600016872744787}
   - component: {fileID: 71040977005084435}
   m_Layer: 7
   m_Name: Sword
@@ -92,23 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7375600016872744787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5519651927877623485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b019f760c30b846a2d37f04e64d67b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 50
-  player: {fileID: 0}
-  boss: {fileID: 0}
-  resetPos: {x: 0, y: 0}
-  mode: 0
 --- !u!95 &3053420698435690282
 Animator:
   serializedVersion: 7
@@ -204,6 +187,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.24, y: 1.84}
   m_EdgeRadius: 0
+--- !u!114 &7375600016872744787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519651927877623485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b019f760c30b846a2d37f04e64d67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 50
+  player: {fileID: 0}
+  boss: {fileID: 0}
+  resetPos: {x: 0, y: 0}
+  mode: 0
 --- !u!114 &71040977005084435
 MonoBehaviour:
   m_ObjectHideFlags: 0
