@@ -1,8 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
 using DarkTonic.MasterAudio;
-using Mono.Cecil.Cil;
-using Unity.Mathematics;
 
 public class KaraCasaState : MonoBehaviour
 {
