@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 345800360261365180}
   - component: {fileID: 5751737113063165519}
   m_Layer: 0
-  m_Name: Trap
+  m_Name: Trap 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2581336832721152559}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.794999, z: 0}
+  m_LocalPosition: {x: 0, y: -6.340001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94,4 +94,4 @@ MonoBehaviour:
   monster: 0
   gap: 6
   originEnemy1: {fileID: 7734317328050618988, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
-  originEnemy2: {fileID: 1082789649985537715, guid: f7cd89f5d7404f54e90a285cb8fc7964, type: 3}
+  originEnemy2: {fileID: 6469827372586514873, guid: 2f7493f170961a04383b2529387b205b, type: 3}

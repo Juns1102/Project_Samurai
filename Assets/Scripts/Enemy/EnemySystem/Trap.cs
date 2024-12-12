@@ -14,7 +14,7 @@ public class Trap : MonoBehaviour
 
     public void OnTrap(){
         enemy1 = Instantiate(originEnemy1, transform.position + new Vector3(-gap, 0, 0), Quaternion.identity);
-        enemy2 = Instantiate(originEnemy1, transform.position + new Vector3(gap, 0, 0), Quaternion.identity);
+        enemy2 = Instantiate(originEnemy2, transform.position + new Vector3(gap, 0, 0), Quaternion.identity);
         gameObject.SetActive(false);
     }
 

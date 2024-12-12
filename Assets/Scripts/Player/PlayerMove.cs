@@ -188,6 +188,12 @@ public class PlayerMove : MonoBehaviour
     private void OnSprint(){
         if(userCtr && dashCoolTime >= dashMaxCoolTime){
             if(inputValue != 0){
+                if (inputValue < 0f) {
+                gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+                else {
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
                 dashCoolTime = 0;
                 anim.SetTrigger("Dodge");
                 MasterAudio.PlaySound3DAtTransform("Dash", transform);

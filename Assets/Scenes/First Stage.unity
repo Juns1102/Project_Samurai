@@ -2566,7 +2566,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 978
+  frames: 2934
 --- !u!4 &569831790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947009263041483575, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
@@ -3447,7 +3447,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 1675
+  frames: 1809
 --- !u!1 &710401025
 GameObject:
   m_ObjectHideFlags: 0
@@ -5785,7 +5785,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 760
+  frames: 1078
 --- !u!1001 &1133823578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5797,6 +5797,10 @@ PrefabInstance:
     - target: {fileID: 1082789649985537715, guid: f7cd89f5d7404f54e90a285cb8fc7964, type: 3}
       propertyPath: m_Name
       value: Wolf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082789649985537715, guid: f7cd89f5d7404f54e90a285cb8fc7964, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5495483080153623870, guid: f7cd89f5d7404f54e90a285cb8fc7964, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6302,7 +6306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931518f9ca6c3844891dee74db8ed494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 5
+  weight: 10
   probabilityToPlay: 100
   importance: 5
   isUninterruptible: 0
@@ -8470,9 +8474,9 @@ MonoBehaviour:
   maxHearts: 100
   skillGuage: 15
   maxSkillGuage: 15
-  healCount: 3
+  healCount: 4
   maxHealCount: 0
-  healSize: 30
+  healSize: 40
 --- !u!4 &1802491440
 Transform:
   m_ObjectHideFlags: 0
@@ -9370,7 +9374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 611611828e4d4b44e9b891c6c168a1c9, type: 2}
   m_sharedMaterial: {fileID: -2358892047746822083, guid: 611611828e4d4b44e9b891c6c168a1c9, type: 2}
@@ -9806,6 +9810,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1108381555191258548, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
+      propertyPath: originEnemy1
+      value: 
+      objectReference: {fileID: 1082789649985537715, guid: f7cd89f5d7404f54e90a285cb8fc7964, type: 3}
+    - target: {fileID: 1108381555191258548, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
+      propertyPath: originEnemy2
+      value: 
+      objectReference: {fileID: 1082789649985537715, guid: f7cd89f5d7404f54e90a285cb8fc7964, type: 3}
     - target: {fileID: 6019007784081580787, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9813,6 +9825,10 @@ PrefabInstance:
     - target: {fileID: 6019007784081580787, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128819951728897231, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
+      propertyPath: trap
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7734317328050618988, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
       propertyPath: m_Name

@@ -319,7 +319,7 @@ MonoBehaviour:
   activeAttack: 1
   hearts: 6
   maxHearts: 6
-  trap: 1
+  trap: 0
   hpCanvas: {fileID: 0}
   sword: 0
   boss: 0
@@ -339,8 +339,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster: 1
   gap: 0
-  originEnemy1: {fileID: 6469827372586514873, guid: 2f7493f170961a04383b2529387b205b, type: 3}
-  originEnemy2: {fileID: 7734317328050618988, guid: e66225ce1c4cce14a94bbc34a5b2bc93, type: 3}
+  originEnemy1: {fileID: 0}
+  originEnemy2: {fileID: 0}
 --- !u!114 &10620227821291422
 MonoBehaviour:
   m_ObjectHideFlags: 0
