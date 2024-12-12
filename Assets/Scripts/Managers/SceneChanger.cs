@@ -31,7 +31,6 @@ public class SceneChanger : MonoBehaviour {
     #endregion
     public void SceneChange() {
         if(SceneManager.GetActiveScene().name == "First Stage") {
-            UIManager.Instance.OnBossHpBar();
             SceneManager.LoadScene("Second Stage");
         }
         else if(SceneManager.GetActiveScene().name == "Second Stage") {
