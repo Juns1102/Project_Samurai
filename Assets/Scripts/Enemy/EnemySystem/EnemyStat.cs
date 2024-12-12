@@ -47,6 +47,7 @@ public class EnemyStat : MonoBehaviour
             anim = GetComponent<Animator>();
             sr = GetComponent<SpriteRenderer>();
         }
+        GameManager.Instance.enemies.Add(gameObject);
     }
 
     private void Update() {

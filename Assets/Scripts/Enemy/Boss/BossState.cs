@@ -61,6 +61,10 @@ public class BossState : MonoBehaviour
         MasterAudio.PlaySound3DAtTransform("BossAttack1", transform);
     }
 
+    private void Dead_Sound(){
+        MasterAudio.PlaySound3DAtTransform("Boss_Death", transform);
+    }
+
     private void SetAttack4(){
         if(player.transform.position.x < 0f){
             transform.position = new Vector3(14, transform.position.y, 0);

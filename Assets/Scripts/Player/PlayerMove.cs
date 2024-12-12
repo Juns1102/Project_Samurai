@@ -241,10 +241,4 @@ public class PlayerMove : MonoBehaviour
             anim.SetBool("Jump", false);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.layer == LayerMask.NameToLayer("SceneTrigger")){
-            SceneChangeMove();
-        }
-    }
 }

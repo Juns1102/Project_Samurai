@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using DarkTonic.MasterAudio;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int healSize;
     private bool ending;
+    public List<GameObject> enemies = new List<GameObject>();
 
     
     float time;
