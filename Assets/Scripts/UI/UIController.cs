@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour
     private GameObject hp_Bar;
     private GameObject boss_Hp_Bar;
     private GameObject skill_Bar;
-    private GameObject heal;
+    private CanvasGroup heal;
     
 
     void Start()
@@ -29,7 +29,7 @@ public class UIController : MonoBehaviour
             managers = GameObject.Find("Managers");
             hp_Bar = GameObject.Find("Hp_Bar");
             skill_Bar = GameObject.Find("Skill_Bar");
-            heal = GameObject.Find("Heal");
+            heal = GameObject.Find("Heal (1)").GetComponent<CanvasGroup>();;
             fade = GameObject.Find("FadeImg");
             fade.GetComponent<CanvasGroup>().alpha = 1;
             fade.SetActive(true);
@@ -63,10 +63,10 @@ public class UIController : MonoBehaviour
             boss_Hp_Bar = GameObject.Find("Boss_Hp_Bar");
         }
         Time.timeScale = 1;
-        esc.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear);
-        hp_Bar.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear);
-        skill_Bar.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear);
-        heal.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear);
+        heal.DOFade(0f, 0.2f).SetEase(Ease.Linear);
+        esc.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear).SetLink(esc);
+        hp_Bar.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear).SetLink(hp_Bar);
+        skill_Bar.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear).SetLink(skill_Bar);
         if(SceneManager.GetActiveScene().name == "Final Stage"){
             boss_Hp_Bar.GetComponent<CanvasGroup>().DOFade(0f, 0.2f).SetEase(Ease.Linear);
         }
@@ -74,9 +74,9 @@ public class UIController : MonoBehaviour
     }
 
     private void FadeInReset(){
-        hp_Bar.GetComponent<CanvasGroup>().DOFade(1f, 0.2f).SetEase(Ease.Linear);
-        skill_Bar.GetComponent<CanvasGroup>().DOFade(1f, 0.2f).SetEase(Ease.Linear);
-        heal.GetComponent<CanvasGroup>().DOFade(1f, 0.2f).SetEase(Ease.Linear);
+        heal.DOFade(1f, 0.2f).SetEase(Ease.Linear);
+        hp_Bar.GetComponent<CanvasGroup>().DOFade(1f, 0.2f).SetEase(Ease.Linear).SetLink(hp_Bar);
+        skill_Bar.GetComponent<CanvasGroup>().DOFade(1f, 0.2f).SetEase(Ease.Linear).SetLink(skill_Bar);
         if(SceneManager.GetActiveScene().name == "Final Stage"){
             boss_Hp_Bar.SetActive(false);
             boss_Hp_Bar.GetComponent<CanvasGroup>().DOFade(1f, 0.2f).SetEase(Ease.Linear);

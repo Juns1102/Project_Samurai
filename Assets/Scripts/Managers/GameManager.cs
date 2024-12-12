@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     public void Reset(){
         hearts = maxHearts;
+        enemies.Clear();
         slider.DOValue(hearts/maxHearts, 0f, false);
         skillGuage = maxSkillGuage;
         skillSlider.DOValue(skillGuage/maxSkillGuage, 0.3f, false);
