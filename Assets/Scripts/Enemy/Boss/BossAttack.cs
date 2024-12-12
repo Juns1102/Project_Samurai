@@ -44,7 +44,8 @@ public class BossAttack : MonoBehaviour
         if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") &&
          !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") &&
          !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3") &&
-         !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_4")){
+         !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_4") &&
+         !anim.GetCurrentAnimatorStateInfo(0).IsName("Die")){
             timeAfterCoolTime += Time.deltaTime;
         }
 
@@ -64,6 +65,7 @@ public class BossAttack : MonoBehaviour
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") &&
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_3") && 
             !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack_4") &&
+            !anim.GetCurrentAnimatorStateInfo(0).IsName("Die") &&
             timeAfterCoolTime >= coolTime && stop) {
                 if(!eStat.GetDie()){
                     Attack();
