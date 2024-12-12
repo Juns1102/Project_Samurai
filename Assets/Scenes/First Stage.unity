@@ -2566,7 +2566,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 2934
+  frames: 5615
 --- !u!4 &569831790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947009263041483575, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
@@ -3447,7 +3447,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 1809
+  frames: 1920
 --- !u!1 &710401025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,7 +3707,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: c6cb3f05297f27249928f1c4c029f514, type: 3}
   m_Resource: {fileID: 8300000, guid: c6cb3f05297f27249928f1c4c029f514, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15848932
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6724,7 +6724,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 3264
+  frames: 3274
 --- !u!1 &1460139898
 GameObject:
   m_ObjectHideFlags: 0
@@ -8475,7 +8475,7 @@ MonoBehaviour:
   skillGuage: 15
   maxSkillGuage: 15
   healCount: 4
-  maxHealCount: 0
+  maxHealCount: 4
   healSize: 40
 --- !u!4 &1802491440
 Transform:

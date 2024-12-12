@@ -102,6 +102,9 @@ public class GameManager : MonoBehaviour
             healCount--;
             UIManager.Instance.GetHeal(healCount);
             hearts += healSize;
+            if(hearts >= maxHearts){
+                hearts = maxHearts;
+            }
             slider.DOValue(hearts/maxHearts, 0.3f, false);
         }
     }
