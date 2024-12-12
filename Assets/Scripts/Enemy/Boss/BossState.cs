@@ -53,8 +53,12 @@ public class BossState : MonoBehaviour
         bc2d.enabled = false;
     }
 
-    private void Attack_Sound(){
-        //MasterAudio.PlaySound3DAtTransform("Wolf_Attack", transform);
+    private void Attack_Sound1(){
+        MasterAudio.PlaySound3DAtTransform("BossAttack", transform);
+    }
+
+    private void Attack_Sound2(){
+        MasterAudio.PlaySound3DAtTransform("BossAttack1", transform);
     }
 
     private void SetAttack4(){

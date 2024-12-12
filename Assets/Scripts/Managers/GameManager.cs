@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
         skillGuage = maxSkillGuage;
         skillSlider.DOValue(skillGuage/maxSkillGuage, 0.3f, false);
         healCount = maxHealCount;
+        UIManager.Instance.GetHeal(healCount);
         time = 0;
         min = 0;
         sec = 0;
@@ -97,7 +98,9 @@ public class GameManager : MonoBehaviour
 
     public void Heal(){
         if(healCount > 0 && hearts < maxHearts){
+            MasterAudio.PlaySound3DAtTransform("Heal", transform);
             healCount--;
+            UIManager.Instance.GetHeal(healCount);
             hearts += healSize;
             slider.DOValue(hearts/maxHearts, 0.3f, false);
         }

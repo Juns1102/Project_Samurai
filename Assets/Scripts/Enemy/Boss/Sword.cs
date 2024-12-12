@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 using System.Collections;
+using DarkTonic.MasterAudio;
 
 public class Sword : MonoBehaviour
 {
@@ -26,12 +27,12 @@ public class Sword : MonoBehaviour
 
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
+        sr.DOFade(0, 0);
         player = GameObject.Find("Player");
         boss = GameObject.Find("Boss");
         body = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
         bc2d = GetComponent<BoxCollider2D>();
-        sr.DOFade(0, 0);
         es = GetComponent<EnemyStat>();
     }
 
@@ -98,6 +99,7 @@ public class Sword : MonoBehaviour
     }
 
     void Attack(){
+        MasterAudio.PlaySound3DAtTransform("FlyingKnife", transform);
         body.AddForce(new Vector2(direction.x, direction.y).normalized * force, ForceMode2D.Impulse);
     }
 

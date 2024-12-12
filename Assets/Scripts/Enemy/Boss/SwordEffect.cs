@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using DarkTonic.MasterAudio;
 
 public class SwordEffect : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class SwordEffect : MonoBehaviour
     public void SetAttack(){
         es.SetAttack();
         sr.DOFade(1, 0.2f).SetLink(gameObject);
+        MasterAudio.PlaySound3DAtTransform("BossAttack4", transform);
         bc2d.enabled = true;
         if(player.transform.position.x < boss.transform.position.x){
             body.DOMoveX(-14f, force).SetEase(ease).OnComplete(() => {sr.DOFade(0, 0).SetLink(gameObject); gameObject.SetActive(false);}).SetLink(gameObject);

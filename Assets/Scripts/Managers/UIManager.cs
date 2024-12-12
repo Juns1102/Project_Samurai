@@ -37,6 +37,7 @@ public class UIManager : MonoBehaviour {
     private GameObject skillBar;
     private TextMeshProUGUI timer;
     private TextMeshProUGUI time;
+    private TextMeshProUGUI healTxt;
 
     private void Start() {
         fade = transform.Find("FadeImg").gameObject;
@@ -45,6 +46,11 @@ public class UIManager : MonoBehaviour {
         boss_HpBar = transform.Find("Boss_Hp_Bar").gameObject;
         timer = transform.Find("Timer").GetComponent<TextMeshProUGUI>();
         time = transform.Find("Esc").Find("Time").GetComponent<TextMeshProUGUI>();
+        healTxt = transform.Find("Heal").Find("Text").GetComponent<TextMeshProUGUI>();
+    }
+
+    public void GetHeal(int heal){
+        healTxt.text = heal.ToString();
     }
 
     public GameObject GethpBar(){
