@@ -2343,7 +2343,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 9a6248bebdadab74989f1f819e4446b8, type: 3}
     - target: {fileID: 8985976911155286811, guid: 1597068b91c25b1419361ca2f1daf8dd, type: 3}
       propertyPath: musicPlaylists.Array.data[0].MusicSettings.Array.data[0].volume
-      value: 0.70794576
+      value: 0.5011872
       objectReference: {fileID: 0}
     - target: {fileID: 8985976911155286811, guid: 1597068b91c25b1419361ca2f1daf8dd, type: 3}
       propertyPath: musicPlaylists.Array.data[0].MusicSettings.Array.data[0].songName
