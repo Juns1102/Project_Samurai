@@ -78,6 +78,7 @@ public class EnemyStat : MonoBehaviour
                         monsterTrap.OnTrap();
                     }
                     anim.SetTrigger("Die");
+                    GameManager.Instance.enemies.Remove(gameObject);
                 }
             }
         }
