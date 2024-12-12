@@ -2566,7 +2566,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 5615
+  frames: 6189
 --- !u!4 &569831790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947009263041483575, guid: b93bd6de75cee3748a8fcc51876525a1, type: 3}
@@ -3447,7 +3447,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 1920
+  frames: 2108
 --- !u!1 &710401025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,7 +3707,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: c6cb3f05297f27249928f1c4c029f514, type: 3}
   m_Resource: {fileID: 8300000, guid: c6cb3f05297f27249928f1c4c029f514, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.15848932
+  m_Volume: 0.19724226
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5484,7 +5484,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: bde3d050cdfc4ce47af2e5101a37fb0d, type: 3}
   m_Resource: {fileID: 8300000, guid: bde3d050cdfc4ce47af2e5101a37fb0d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.22646444
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6724,7 +6724,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 3274
+  frames: 3344
 --- !u!1 &1460139898
 GameObject:
   m_ObjectHideFlags: 0
@@ -6928,7 +6928,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 1582
+  frames: 3204
 --- !u!1 &1469327055
 GameObject:
   m_ObjectHideFlags: 0
@@ -7659,7 +7659,7 @@ MonoBehaviour:
   soundPlayedEventActive: 0
   soundPlayedCustomEvent: 
   willCleanUpDelegatesAfterStop: 1
-  frames: 1926
+  frames: 2109
 --- !u!1 &1640685007
 GameObject:
   m_ObjectHideFlags: 0
