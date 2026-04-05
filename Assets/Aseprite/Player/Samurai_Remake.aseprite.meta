@@ -63,6 +63,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -368,7 +369,7 @@ ScriptedImporter:
     uvTransform: {x: 102, y: 184}
   - name: Frame_18
     originalName: 
-    pivot: {x: 0.44, y: 0}
+    pivot: {x: 0.8163265, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -389,7 +390,7 @@ ScriptedImporter:
     uvTransform: {x: 70, y: 4}
   - name: Frame_19
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.90909094, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -410,7 +411,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 66}
   - name: Frame_20
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.9111111, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -431,7 +432,7 @@ ScriptedImporter:
     uvTransform: {x: 181, y: 4}
   - name: Frame_21
     originalName: 
-    pivot: {x: 0.4, y: 0}
+    pivot: {x: 0.8043478, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -452,7 +453,7 @@ ScriptedImporter:
     uvTransform: {x: 127, y: 4}
   - name: Frame_22
     originalName: 
-    pivot: {x: 0.3, y: 0}
+    pivot: {x: 0.62068963, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -473,7 +474,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_23
     originalName: 
-    pivot: {x: 0.55, y: 0}
+    pivot: {x: 0.9761905, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -494,7 +495,7 @@ ScriptedImporter:
     uvTransform: {x: 56, y: 66}
   - name: Frame_24
     originalName: 
-    pivot: {x: 0.6, y: 0}
+    pivot: {x: 1, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -515,7 +516,7 @@ ScriptedImporter:
     uvTransform: {x: 162, y: 66}
   - name: Frame_25
     originalName: 
-    pivot: {x: 0.6, y: 0}
+    pivot: {x: 1.025, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -558,7 +559,12 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -430838030
+    uuid:
+      value0: 3839502650
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -455464646
     name: Samurai_Remake
     layerFlags: 0
     layerType: 0
@@ -769,3 +775,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 256, y: 128}
+  previousTextureSize: {x: 256, y: 256}
